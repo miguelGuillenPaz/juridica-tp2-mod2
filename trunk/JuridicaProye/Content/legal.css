@@ -1,0 +1,52 @@
+﻿/*body {font: normal normal normal 13px/1.4 Arial, Helvetica, sans-serif; text-align:center; color:#333;}*/
+section#seccionReqLegal {margin:0 auto 20px auto; padding:20px; width:960px; text-align:left; background:#fff; font-size:13px;}
+
+/*---------------------------------------------------------------
+Comunes*/
+h1 {margin-bottom:20px; font-size:18px; font-weight:bold;}
+input[type="text"] {height:24px; border:1px solid #a1a1a1;}
+.text0 {width:100px;}
+.text1 {width:200px;}
+.text2 {width:260px;}
+select {padding:3px 5px; width:206px; height:28px; border:1px solid #a1a1a1; color:#333;}
+.select1 {width:300px;}
+textarea {width:859px; height:100px; border:1px solid #a1a1a1;}
+
+fieldset {padding:15px 15px 0 15px; border:1px solid #a1a1a1;}
+fieldset legend {font-weight:bold;}
+
+.btn {background: #555; display: inline-block; padding: 8px 10px 6px; color: #fff; text-decoration: none; font-weight: bold; line-height: 1; border-bottom: 1px solid #222; position: relative; cursor:pointer;}
+.btn:hover {background:#333;}
+
+.fila {display:block; overflow:hidden; margin-bottom:15px; width:100%;}
+.final {margin-right:0 !important;}
+.paddingTop {padding-top:5px;}
+
+/*---------------------------------------------------------------
+Registrar Requerimiento*/
+.col1, .col2, .col3, .col4, .col5, .col6 {float:left; margin-right:15px;}
+.col1 {width:80px; padding-top:5px;}
+.col2 {width:120px;}
+.col3 {width:160px;}
+.col4 {width:200px;}
+.col5 {width:240px;}
+.col6 {width:280px;}
+
+.disabled {background:#dcdcdc;}
+
+#btnEliminarVecino {margin-top:20px; width:960px; text-align:right;}
+
+#grillaVecinos {overflow:hidden; margin-top:10px; border:1px solid #a1a1a1;}
+#grillaVecinos .cabeceraGrilla {padding:3px 0; font-weight:bold; background:#a9a9a9;}
+#grillaVecinos label#grillaVacia {padding-left:5px; font-style:italic;}
+/*#grillaVecinos ul li {display:inline;}*/
+#grillaVecinos .colNombre, .colDireccion, .colDistrito, .colTipoEdif, .colNomCond, .colEliminar {float:left; margin-right:10px;}
+#grillaVecinos .colNombre {padding-left:5px; width:190px;}
+#grillaVecinos .colDireccion {width:260px;}
+#grillaVecinos .colDistrito {width:120px;}
+#grillaVecinos .colTipoEdif {width:105px;}
+#grillaVecinos .colNomCond {width:170px;}
+#grillaVecinos .colEliminar {padding-right:5px; width:53px;}
+
+#btnGrabarReqLegal {margin-top:20px;}
+.msgConfirmacion {margin:15px 0; padding:10px 0; border:1px solid #ccc; width:100%; background:#f6f6f6; font-size:14px; color:Red; text-align:center;}

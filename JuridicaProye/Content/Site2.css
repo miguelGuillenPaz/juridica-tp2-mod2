@@ -1,0 +1,931 @@
+﻿/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+    background-color: #EB1C24;
+    font-size: .75em;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #696969;
+}
+
+a:link
+{
+    color: #034af3;
+    text-decoration: underline;
+}
+a:visited
+{
+    color: #505abc;
+}
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+a:active
+{
+    color: #12eb87;
+}
+
+p, ul
+{
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 0 0 10px 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondo_logo
+{
+    background-image:url('../Images/Graña-y-Montero-Repor.jpg');
+    font-size: 32px
+    font-family: Verdana, Helvetica, Sans-Serif;
+    color: #ffffff;
+}
+
+#header h1
+{
+    font-weight: bold;
+    color: #696969;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+}
+
+#main
+{
+    padding: 30px 30px 15px 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+#footer
+{
+    color: #999;
+    padding: 10px 0;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+    font-size: .9em;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+ul#menu
+{
+    border-bottom: 1px #696969 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+    text-align: right;
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+}
+
+ul#menu li#greeting
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: #FEB600;
+    color: #EB1C24;
+}
+
+ul#menu li a:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li a:active
+{
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    background-color: #fff;
+    color: #000;
+}
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset 
+{
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #CCC;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input[type="text"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+input[type="password"] 
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table 
+{
+  border: solid 1px #FEB600;
+  border-collapse: collapse;
+}
+
+table td 
+{
+  padding: 5px;   
+  border: solid 1px #FEB600;
+}
+
+table th
+{
+  padding: 6px 5px;
+  text-align: center;
+  background-color: #FEB600; 
+  border: solid 1px #FEB600;
+  color: #ffffff;   
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.clear
+{
+    clear: both;
+}
+
+.error
+{
+    color:Red;
+}
+
+#menucontainer
+{
+    margin-top:50px;
+}
+
+div#title
+{
+    display:block;
+    float:left;
+    text-align:left;
+}
+
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:#ffffff;
+    font-weight: bold;	
+}
+
+#logindisplay a:link
+{
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#logindisplay a:visited
+{
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#logindisplay a:hover
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label,
+.editor-label,
+.display-field,
+.editor-field
+{
+    margin: 0.5em 0;
+}
+
+.text-box
+{
+    width: 30em;
+}
+
+.text-box.multi-line
+{
+    height: 6.5em;
+}
+
+.tri-state
+{
+    width: 6em;
+}
+
+/* PANTALLA INICIO GYM   
+----------------------------------------------------------*/
+
+.contenido-top
+
+{
+    width: auto;
+
+     height: 450px;		    
+     margin: 0px auto;
+    
+     background-color: #fff;
+    
+     padding-left: 10px;
+    
+     padding-bottom: 35px;
+    
+     border-top-right-radius: 5px;
+    
+     border-top-left-radius: 5px;
+    
+     padding-top: 15px;
+    
+     box-shadow: 0 3px 5px rgba(50, 50, 50, 0.4);
+    
+     position: relative;
+    
+     z-index: 999;
+
+}
+
+.contenido-izquierda
+
+{
+    width: 620px;
+    
+     float: left;
+    
+     margin-right: 31px;
+
+}
+
+
+.areas-negocios
+
+{
+    height: 230px;
+    
+     border-top: dotted 1px #58595B;
+    
+     border-bottom: dotted 1px #58595B;
+    
+     margin-top: 15px;
+
+}
+
+
+.areas-negocios .area
+
+{
+    width: 149px;
+    
+     float: left;
+    
+     height: 208px;
+    
+     border-left: dotted 1px #58595B;
+    
+     margin-top: 12px;
+    
+     padding-top: 8px;
+    
+     padding-left: 10px;
+    
+     position: relative;
+    
+     cursor: pointer;
+
+}
+
+
+
+.areas-negocios .area img
+
+{
+    -webkit-transition: all 300ms ease-in-out;
+    
+     -moz-transition: all 300ms ease-in-out;
+    
+     -ms-transition: all 300ms ease-in-out;
+    
+     -o-transition: all 300ms ease-in-out;
+    
+     transition: all 300ms ease-in-out;
+
+}
+
+
+
+.areas-negocios .area:hover h2
+
+{
+    
+     text-decoration: underline;
+
+}
+
+
+.areas-negocios .area:first-child
+
+{
+    border-left: none;
+    
+     padding-left: 0px;
+
+}
+
+
+.areas-negocios .area:last-child
+
+{
+    
+     width: 139px;
+
+}
+
+
+
+.areas-negocios #servicios
+
+{
+    
+     width: 139px !important;
+
+}
+
+
+.areas-negocios #servicios h2
+
+{
+    
+     font-family: VAGRoundedBold;
+    
+     color: #0060A0;
+    
+     font-size: 18px;
+
+}
+
+
+.areas-negocios #servicios img
+
+{
+    
+     border: solid 10px #d8d9db;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.areas-negocios #servicios:hover img
+
+{
+    
+     border: solid 10px #0060A0;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.areas-negocios .activo.servicios h2
+
+{
+    
+     text-decoration: underline;
+    
+     color: #0060A0;
+
+}
+
+
+.areas-negocios .activo.servicios img
+
+{
+    
+     border: solid 10px #0060A0 !important;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.nombre-area-servicios
+
+{
+    
+     color: #0060A0;
+
+}
+
+.areas-negocios #ingenieria h2
+
+{
+    
+     font-family: VAGRoundedBold;
+    color: #E31C24;
+    font-size: 18px;
+
+}
+
+
+.areas-negocios #ingenieria img
+
+
+{
+    
+     border: solid 10px #d8d9db;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.areas-negocios #ingenieria:hover img
+
+{
+    
+     border: solid 10px #E31C24;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.areas-negocios .activo.ingenieria h2
+
+{
+    
+     text-decoration: underline;
+    
+     color: #E31C24;
+
+}
+
+
+.areas-negocios .activo.ingenieria img
+
+{
+    
+     border: solid 10px #E31C24 !important;
+    
+     bottom: 10px;
+    
+     position: absolute;
+
+}
+
+
+.nombre-area-ingenieria
+
+{
+    
+     color: #E31C24;
+
+}
+
+
+
+.areas-negocios #infraestructura
+{
+
+}
+.areas-negocios #infraestructura h2
+{
+    font-family: VAGRoundedBold;
+    color: #5b6770;
+    font-size: 18px;
+}
+.areas-negocios #infraestructura img
+{
+    border: solid 10px #d8d9db;
+    bottom: 10px;
+    position: absolute;
+}
+.areas-negocios #infraestructura:hover img
+{
+    border: solid 10px #5b6770;
+    bottom: 10px;
+    position: absolute;
+}
+.areas-negocios .activo.infraestructura h2
+{
+    text-decoration: underline;
+    color: #5b6770;
+}
+.areas-negocios .activo.infraestructura img
+{
+    border: solid 10px #5b6770 !important;
+    bottom: 10px;
+    position: absolute;
+}
+.nombre-area-infraestructura
+{
+    color: #5b6770;
+}
+
+.contenido-derecha
+
+{
+    
+     width: 279px;
+    
+     float: left;
+
+}
+
+
+.clear
+
+{
+    
+    clear: both;
+
+}
+
+
+.areas-negocios
+
+{
+    
+     height: 230px;
+    
+     border-top: dotted 1px #58595B;
+    
+     border-bottom: dotted 1px #58595B;
+    
+     margin-top: 15px;
+
+}
+
+.contenedor-noticias
+
+{
+    
+     border-top: dotted 1px #58595B;
+    
+     margin-top: 15px;
+
+}
+
+
+.contenido-derecha .noticia:first-child
+
+{
+    /* margin-top: 20px;*/
+}
+
+
+.contenido-derecha .noticia
+
+{
+    width: 279px;
+    
+     height: auto;
+    
+     padding: 6px 0px;
+    
+     border-bottom: dotted 1px #58595B;
+    
+     font-family: PTSansRegular;
+    
+     font-size: 12px;
+    
+     line-height: 16px;
+
+}
+
+
+
+.contenido-derecha .noticia .video-noticia
+
+{
+    
+     width: 279px;
+    background-color: #414143;
+    margin-bottom: 18px;
+
+}
+
+
+.contenido-derecha .noticia .head-noticia
+
+{
+    
+     cursor: pointer;
+    
+     display: block;
+    
+     text-align: left;
+    
+     font-family: VAGRoundedBold;
+    
+     color: #E9861E;
+    
+     padding: 3px 0px;
+    
+     padding-right: 20px;
+    
+     background: url(../Images/flechaabajo.jpg);
+    
+     background-position: right 5px;
+    
+     background-repeat: no-repeat;
+
+}
+
+
+.contenido-derecha .noticia.video .head-noticia
+
+{
+    
+     padding-right: 0px;
+    
+     background: none;
+
+}
+
+
+.contenido-derecha .noticia .head-noticia .fecha-noticia
+
+{
+    
+     font-size: 11px;
+    
+     margin-right: 3px;
+
+}
+
+
+.contenido-derecha .noticia .head-noticia .titulo-noticia
+
+{
+    
+     font-size: 12px;
+    
+     margin-left: 3px;
+
+}
+
+
+.contenido-derecha .noticia.video .head-noticia .titulo-noticia
+
+{
+    
+     padding-left: 20px;
+    
+     background-image: url('../images/video.png');
+    
+     background-position: left 2px;
+    
+     background-repeat: no-repeat;
+
+}
+
+
+
+.contenido-derecha .noticia .texto-noticia
+
+{
+    
+     display: none;
+    
+     text-align: justify;
+    
+     color: #6D6E71;
+
+}
+
+
+
+.leer-mas
+
+{
+    
+     font-family: PTSansBold;
+    
+     font-style: italic;
+    
+     font-size: 12px;
+    
+     color: #E9861E;
+    
+     padding-right: 20px;
+    
+     background: url('Images/arrow.png');
+    
+     background-position: right center;
+    
+     background-repeat: no-repeat;
+
+}
+
+
+
+
+/* Noticias */
+
+
+.contenido-derecha-interna .item_noticia
+
+{
+    
+     width: 95%;
+    
+     border-bottom: dotted 1px #58595B;
+
+}
+
+
+
+
+.contenido-derecha-interna .item_noticia .titulo_noticia
+
+{
+    
+     font-size: 16px;
+    
+     color: #EB8F2F;
+    
+     padding: 10px 0px;
+    
+     cursor: pointer;
+    
+     padding-right: 20px;
+    
+     background: url(Images/flechaabajo.jpg);
+    
+     background-position: right 10px;
+     
+     background-repeat: no-repeat;
+
+}
+
+
+
+.contenido-derecha-interna .item_noticia .detalle_noticia p
+
+{
+    
+     font-size: 12px;
+    
+     line-height: 14px;
+    
+     padding: 8px 0px;
+
+}
+
+
+
+.centro
+{
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+.arrow
+{
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+

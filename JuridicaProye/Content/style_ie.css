@@ -1,0 +1,13 @@
+﻿#menu-top ul.navigation_menu li
+{
+    float: left;
+    margin-right: 9px;
+}
+
+#menu-top ul li a:hover, #menu-top ul li a.active
+{
+    font-family: 'PTSansBold';
+    color: #000;
+    text-decoration: underline;
+    text-shadow: none;
+}

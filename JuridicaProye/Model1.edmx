@@ -1,0 +1,2123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GyMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GyMModelStoreContainer">
+          <EntitySet Name="T_Actividad" EntityType="GyMModel.Store.T_Actividad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Articulo" EntityType="GyMModel.Store.T_Articulo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Cargo" EntityType="GyMModel.Store.T_Cargo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DetallePresupuesto" EntityType="GyMModel.Store.T_DetallePresupuesto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DetalleRequerimiento" EntityType="GyMModel.Store.T_DetalleRequerimiento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Empleado" EntityType="GyMModel.Store.T_Empleado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Entregable" EntityType="GyMModel.Store.T_Entregable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Equipo" EntityType="GyMModel.Store.T_Equipo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_FlujoCaja" EntityType="GyMModel.Store.T_FlujoCaja" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Material" EntityType="GyMModel.Store.T_Material" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PlanEmpleadosActividad" EntityType="GyMModel.Store.T_PlanEmpleadosActividad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PlanProyecto" EntityType="GyMModel.Store.T_PlanProyecto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PlanRecursosActividad" EntityType="GyMModel.Store.T_PlanRecursosActividad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PlanSubcontratasActividad" EntityType="GyMModel.Store.T_PlanSubcontratasActividad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Presupuesto" EntityType="GyMModel.Store.T_Presupuesto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Proveedor" EntityType="GyMModel.Store.T_Proveedor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Proyecto" EntityType="GyMModel.Store.T_Proyecto" store:Type="Tables" store:Schema="dbo" store:Name="T_Proyecto">
+            <DefiningQuery>SELECT 
+      [T_Proyecto].[codPro] AS [codPro], 
+      [T_Proyecto].[nomPro] AS [nomPro], 
+      [T_Proyecto].[feciniplaPro] AS [feciniplaPro], 
+      [T_Proyecto].[fecfinplaPro] AS [fecfinplaPro], 
+      [T_Proyecto].[fecinireaPro] AS [fecinireaPro], 
+      [T_Proyecto].[fecfinreaPro] AS [fecfinreaPro], 
+      [T_Proyecto].[priPro] AS [priPro], 
+      [T_Proyecto].[razsocfacPro] AS [razsocfacPro], 
+      [T_Proyecto].[conpagPro] AS [conpagPro], 
+      [T_Proyecto].[monfacPro] AS [monfacPro]
+      FROM [dbo].[T_Proyecto] AS [T_Proyecto]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T_Recurso" EntityType="GyMModel.Store.T_Recurso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Requerimiento" EntityType="GyMModel.Store.T_Requerimiento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_TipoCambio" EntityType="GyMModel.Store.T_TipoCambio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_TipoDocumentoIdentidad" EntityType="GyMModel.Store.T_TipoDocumentoIdentidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_TipoMoneda" EntityType="GyMModel.Store.T_TipoMoneda" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_TipoProyecto" EntityType="GyMModel.Store.T_TipoProyecto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_TipoRecurso" EntityType="GyMModel.Store.T_TipoRecurso" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_Ubigeo" EntityType="GyMModel.Store.T_Ubigeo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_VariablesPresupuesto" EntityType="GyMModel.Store.T_VariablesPresupuesto" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_T_Actividad55" Association="GyMModel.Store.FK_T_Actividad55">
+            <End Role="T_Entregable" EntitySet="T_Entregable" />
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Actividad65" Association="GyMModel.Store.FK_T_Actividad65">
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Articulo98" Association="GyMModel.Store.FK_T_Articulo98">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Articulo" EntitySet="T_Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePresupuesto91" Association="GyMModel.Store.FK_T_DetallePresupuesto91">
+            <End Role="T_Presupuesto" EntitySet="T_Presupuesto" />
+            <End Role="T_DetallePresupuesto" EntitySet="T_DetallePresupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePresupuesto92" Association="GyMModel.Store.FK_T_DetallePresupuesto92">
+            <End Role="T_VariablesPresupuesto" EntitySet="T_VariablesPresupuesto" />
+            <End Role="T_DetallePresupuesto" EntitySet="T_DetallePresupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento60" Association="GyMModel.Store.FK_T_DetalleRequerimiento60">
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento64" Association="GyMModel.Store.FK_T_DetalleRequerimiento64">
+            <End Role="T_Cargo" EntitySet="T_Cargo" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento66" Association="GyMModel.Store.FK_T_DetalleRequerimiento66">
+            <End Role="T_Requerimiento" EntitySet="T_Requerimiento" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento94" Association="GyMModel.Store.FK_T_DetalleRequerimiento94">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado57" Association="GyMModel.Store.FK_T_Empleado57">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado63" Association="GyMModel.Store.FK_T_Empleado63">
+            <End Role="T_Cargo" EntitySet="T_Cargo" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado81" Association="GyMModel.Store.FK_T_Empleado81">
+            <End Role="T_TipoDocumentoIdentidad" EntitySet="T_TipoDocumentoIdentidad" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Equipo97" Association="GyMModel.Store.FK_T_Equipo97">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Equipo" EntitySet="T_Equipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_FlujoCaja90" Association="GyMModel.Store.FK_T_FlujoCaja90">
+            <End Role="T_TipoCambio" EntitySet="T_TipoCambio" />
+            <End Role="T_FlujoCaja" EntitySet="T_FlujoCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Material99" Association="GyMModel.Store.FK_T_Material99">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Material" EntitySet="T_Material" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanEmpleadosActividad58" Association="GyMModel.Store.FK_T_PlanEmpleadosActividad58">
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+            <End Role="T_PlanEmpleadosActividad" EntitySet="T_PlanEmpleadosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanEmpleadosActividad59" Association="GyMModel.Store.FK_T_PlanEmpleadosActividad59">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanEmpleadosActividad" EntitySet="T_PlanEmpleadosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanProyecto54" Association="GyMModel.Store.FK_T_PlanProyecto54">
+            <End Role="T_Entregable" EntitySet="T_Entregable" />
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanProyecto87" Association="GyMModel.Store.FK_T_PlanProyecto87">
+            <End Role="T_FlujoCaja" EntitySet="T_FlujoCaja" />
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanRecursosActividad95" Association="GyMModel.Store.FK_T_PlanRecursosActividad95">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_PlanRecursosActividad" EntitySet="T_PlanRecursosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanRecursosActividad96" Association="GyMModel.Store.FK_T_PlanRecursosActividad96">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanRecursosActividad" EntitySet="T_PlanRecursosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanSubcontratasActivi77" Association="GyMModel.Store.FK_T_PlanSubcontratasActivi77">
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+            <End Role="T_PlanSubcontratasActividad" EntitySet="T_PlanSubcontratasActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanSubcontratasActivi78" Association="GyMModel.Store.FK_T_PlanSubcontratasActivi78">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanSubcontratasActividad" EntitySet="T_PlanSubcontratasActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Presupuesto93" Association="GyMModel.Store.FK_T_Presupuesto93">
+            <End Role="T_TipoMoneda" EntitySet="T_TipoMoneda" />
+            <End Role="T_Presupuesto" EntitySet="T_Presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor80" Association="GyMModel.Store.FK_T_Proveedor80">
+            <End Role="T_TipoDocumentoIdentidad" EntitySet="T_TipoDocumentoIdentidad" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor83" Association="GyMModel.Store.FK_T_Proveedor83">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor84" Association="GyMModel.Store.FK_T_Proveedor84">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Recurso85" Association="GyMModel.Store.FK_T_Recurso85">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Requerimiento82" Association="GyMModel.Store.FK_T_Requerimiento82">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Requerimiento" EntitySet="T_Requerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_TipoRecurso79" Association="GyMModel.Store.FK_T_TipoRecurso79">
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="T_Actividad">
+          <Key>
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="codAct" Type="int" Nullable="false" />
+          <Property Name="corAct" Type="int" Nullable="false" />
+          <Property Name="desAct" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="feciniAct" Type="date" Nullable="false" />
+          <Property Name="fecfinAct" Type="date" Nullable="false" />
+          <Property Name="preAct" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="tipAct" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="codEnt" Type="int" Nullable="false" />
+          <Property Name="codPlaPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Articulo">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="unimedinvArt" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Cargo">
+          <Key>
+            <PropertyRef Name="codCar" />
+          </Key>
+          <Property Name="nomCar" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="desCar" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codCar" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_DetallePresupuesto">
+          <Key>
+            <PropertyRef Name="codPre" />
+          </Key>
+          <Property Name="codDetPre" Type="int" Nullable="false" />
+          <Property Name="desDetPre" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="porDetPre" Type="float" Nullable="false" />
+          <Property Name="valDetPre" Type="float" Nullable="false" />
+          <Property Name="codPre" Type="int" Nullable="false" />
+          <Property Name="codVarPre" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_DetalleRequerimiento">
+          <Key>
+            <PropertyRef Name="codReq" />
+          </Key>
+          <Property Name="codcorDetReq" Type="smallint" Nullable="false" />
+          <Property Name="canDetReq" Type="smallint" Nullable="false" />
+          <Property Name="codEmp" Type="int" Nullable="false" />
+          <Property Name="codCar" Type="int" Nullable="false" />
+          <Property Name="codReq" Type="int" Nullable="false" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Empleado">
+          <Key>
+            <PropertyRef Name="codEmp" />
+          </Key>
+          <Property Name="areEmp" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="nomEmp" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="apepatEmp" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="apematEmp" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="fecnacEmp" Type="date" Nullable="false" />
+          <Property Name="fecinglabEmp" Type="date" Nullable="false" />
+          <Property Name="dniEmp" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codEmp" Type="int" Nullable="false" />
+          <Property Name="codCar" Type="int" Nullable="false" />
+          <Property Name="codPlaPro" Type="int" />
+          <Property Name="codTipDocIde" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Entregable">
+          <Key>
+            <PropertyRef Name="codEnt" />
+          </Key>
+          <Property Name="nomEnt" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="desEnt" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codEnt" Type="int" Nullable="false" />
+          <Property Name="codPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Equipo">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="marEqu" Type="int" Nullable="false" />
+          <Property Name="fecadqEqu" Type="date" Nullable="false" />
+          <Property Name="TipEqu" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="aniEqu" Type="date" Nullable="false" />
+          <Property Name="modEqu" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_FlujoCaja">
+          <Key>
+            <PropertyRef Name="codFluCaj" />
+          </Key>
+          <Property Name="feciniFluCaj" Type="date" Nullable="false" />
+          <Property Name="fecfinFluCaj" Type="date" Nullable="false" />
+          <Property Name="facFluCaj" Type="char" Nullable="false" MaxLength="11" />
+          <Property Name="pretotFluCaj" Type="float" Nullable="false" />
+          <Property Name="deptotFluCaj" Type="float" Nullable="false" />
+          <Property Name="gastotFluCaj" Type="float" Nullable="false" />
+          <Property Name="baltotFluCaj" Type="float" Nullable="false" />
+          <Property Name="depFluCaj" Type="float" Nullable="false" />
+          <Property Name="tr1FluCaj" Type="float" Nullable="false" />
+          <Property Name="tr2FluCaj" Type="float" Nullable="false" />
+          <Property Name="tr3FluCaj" Type="float" Nullable="false" />
+          <Property Name="tr4FluCaj" Type="float" Nullable="false" />
+          <Property Name="codFluCaj" Type="int" Nullable="false" />
+          <Property Name="T_TipoCambio_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Material">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="marMat" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="tipMat" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="modMat" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="unimedMat" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PlanEmpleadosActividad">
+          <Key>
+            <PropertyRef Name="codEmp" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="horasiPlaEmpAct" Type="float" Nullable="false" />
+          <Property Name="codEmp" Type="int" Nullable="false" />
+          <Property Name="codPlaPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PlanProyecto">
+          <Key>
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="desPlaPro" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codPlaPro" Type="int" Nullable="false" />
+          <Property Name="codPro" Type="int" Nullable="false" />
+          <Property Name="codEnt" Type="int" />
+          <Property Name="codFluCaj" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PlanRecursosActividad">
+          <Key>
+            <PropertyRef Name="codRec" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="cantidad" Type="smallint" Nullable="false" />
+          <Property Name="horasiPlaEquAct" Type="float" Nullable="false" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+          <Property Name="codPlaPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PlanSubcontratasActividad">
+          <Key>
+            <PropertyRef Name="codProv" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="canPlaSubCon" Type="smallint" Nullable="false" />
+          <Property Name="horasiPlaSubCon" Type="float" Nullable="false" />
+          <Property Name="codProv" Type="int" Nullable="false" />
+          <Property Name="codPlaPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Presupuesto">
+          <Key>
+            <PropertyRef Name="codPre" />
+          </Key>
+          <Property Name="verPre" Type="int" Nullable="false" />
+          <Property Name="fecPre" Type="date" Nullable="false" />
+          <Property Name="monPre" Type="float" Nullable="false" />
+          <Property Name="impPre" Type="float" Nullable="false" />
+          <Property Name="estPre" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="nroordejePre" Type="int" Nullable="false" />
+          <Property Name="impconPre" Type="float" Nullable="false" />
+          <Property Name="codPre" Type="int" Nullable="false" />
+          <Property Name="codPro" Type="int" Nullable="false" />
+          <Property Name="codTipMon" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Proveedor">
+          <Key>
+            <PropertyRef Name="codProv" />
+          </Key>
+          <Property Name="rucPro" Type="int" Nullable="false" />
+          <Property Name="razsocPro" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="dirPro" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codProv" Type="int" Nullable="false" />
+          <Property Name="codTipDocIde" Type="int" Nullable="false" />
+          <Property Name="codTipRec" Type="int" Nullable="false" />
+          <Property Name="T_TipoRecurso_T_TipoRecurso_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'GyM.dbo.T_Proyecto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="T_Proyecto">
+          <Key>
+            <PropertyRef Name="codPro" />
+          </Key>
+          <Property Name="codPro" Type="int" Nullable="false" />
+          <Property Name="nomPro" Type="nvarchar" MaxLength="250" />
+          <Property Name="feciniplaPro" Type="smalldatetime" />
+          <Property Name="fecfinplaPro" Type="smalldatetime" />
+          <Property Name="fecinireaPro" Type="smalldatetime" />
+          <Property Name="fecfinreaPro" Type="smalldatetime" />
+          <Property Name="priPro" Type="int" />
+          <Property Name="razsocfacPro" Type="nvarchar" MaxLength="250" />
+          <Property Name="conpagPro" Type="nchar" MaxLength="10" />
+          <Property Name="monfacPro" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="T_Recurso">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="desRec" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="preRec" Type="float" Nullable="false" />
+          <Property Name="codRec" Type="int" Nullable="false" />
+          <Property Name="codTipRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Requerimiento">
+          <Key>
+            <PropertyRef Name="codReq" />
+          </Key>
+          <Property Name="desReq" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="fecReq" Type="date" Nullable="false" />
+          <Property Name="priReq" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="codReq" Type="int" Nullable="false" />
+          <Property Name="codPro" Type="int" Nullable="false" />
+          <Property Name="codTipRec" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoCambio">
+          <Key>
+            <PropertyRef Name="T_TipoCambio_ID" />
+          </Key>
+          <Property Name="fecTipCam" Type="date" Nullable="false" />
+          <Property Name="valcomTipCam" Type="float" Nullable="false" />
+          <Property Name="valvenTipCam" Type="float" Nullable="false" />
+          <Property Name="T_TipoCambio_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoDocumentoIdentidad">
+          <Key>
+            <PropertyRef Name="codTipDocIde" />
+          </Key>
+          <Property Name="nomTipDocIde" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="desTipDocIde" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codTipDocIde" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoMoneda">
+          <Key>
+            <PropertyRef Name="codTipMon" />
+          </Key>
+          <Property Name="monTipMon" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="desTipMon" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="codTipMon" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoProyecto">
+          <Key>
+            <PropertyRef Name="codTipPro" />
+          </Key>
+          <Property Name="nomTipPro" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="desTipPro" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codTipPro" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoRecurso">
+          <Key>
+            <PropertyRef Name="codTipRec" />
+          </Key>
+          <Property Name="nomTipRec" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="desTipRec" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codTipRec" Type="int" Nullable="false" />
+          <Property Name="codPro" Type="int" />
+        </EntityType>
+        <EntityType Name="T_Ubigeo">
+          <Key>
+            <PropertyRef Name="codUbiProv" />
+            <PropertyRef Name="codUbiDist" />
+            <PropertyRef Name="codUbiDep" />
+          </Key>
+          <Property Name="nomUbi" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="codposUbi" Type="char" Nullable="false" MaxLength="5" />
+          <Property Name="codUbiProv" Type="int" Nullable="false" />
+          <Property Name="codUbiDist" Type="int" Nullable="false" />
+          <Property Name="codUbiDep" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_VariablesPresupuesto">
+          <Key>
+            <PropertyRef Name="codVarPre" />
+          </Key>
+          <Property Name="desVarPre" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="codVarPre" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_T_Actividad55">
+          <End Role="T_Entregable" Type="GyMModel.Store.T_Entregable" Multiplicity="1" />
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Entregable">
+              <PropertyRef Name="codEnt" />
+            </Principal>
+            <Dependent Role="T_Actividad">
+              <PropertyRef Name="codEnt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Actividad65">
+          <End Role="T_PlanProyecto" Type="GyMModel.Store.T_PlanProyecto" Multiplicity="1" />
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_PlanProyecto">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Articulo98">
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="1" />
+          <End Role="T_Articulo" Type="GyMModel.Store.T_Articulo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Articulo">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePresupuesto91">
+          <End Role="T_Presupuesto" Type="GyMModel.Store.T_Presupuesto" Multiplicity="1" />
+          <End Role="T_DetallePresupuesto" Type="GyMModel.Store.T_DetallePresupuesto" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Presupuesto">
+              <PropertyRef Name="codPre" />
+            </Principal>
+            <Dependent Role="T_DetallePresupuesto">
+              <PropertyRef Name="codPre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePresupuesto92">
+          <End Role="T_VariablesPresupuesto" Type="GyMModel.Store.T_VariablesPresupuesto" Multiplicity="1" />
+          <End Role="T_DetallePresupuesto" Type="GyMModel.Store.T_DetallePresupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_VariablesPresupuesto">
+              <PropertyRef Name="codVarPre" />
+            </Principal>
+            <Dependent Role="T_DetallePresupuesto">
+              <PropertyRef Name="codVarPre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento60">
+          <End Role="T_Empleado" Type="GyMModel.Store.T_Empleado" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.Store.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empleado">
+              <PropertyRef Name="codEmp" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codEmp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento64">
+          <End Role="T_Cargo" Type="GyMModel.Store.T_Cargo" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.Store.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Cargo">
+              <PropertyRef Name="codCar" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento66">
+          <End Role="T_Requerimiento" Type="GyMModel.Store.T_Requerimiento" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.Store.T_DetalleRequerimiento" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Requerimiento">
+              <PropertyRef Name="codReq" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codReq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento94">
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.Store.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado57">
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="0..1" />
+          <End Role="T_Empleado" Type="GyMModel.Store.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado63">
+          <End Role="T_Cargo" Type="GyMModel.Store.T_Cargo" Multiplicity="1" />
+          <End Role="T_Empleado" Type="GyMModel.Store.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Cargo">
+              <PropertyRef Name="codCar" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado81">
+          <End Role="T_TipoDocumentoIdentidad" Type="GyMModel.Store.T_TipoDocumentoIdentidad" Multiplicity="1" />
+          <End Role="T_Empleado" Type="GyMModel.Store.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoDocumentoIdentidad">
+              <PropertyRef Name="codTipDocIde" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codTipDocIde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Equipo97">
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="1" />
+          <End Role="T_Equipo" Type="GyMModel.Store.T_Equipo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Equipo">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_FlujoCaja90">
+          <End Role="T_TipoCambio" Type="GyMModel.Store.T_TipoCambio" Multiplicity="1" />
+          <End Role="T_FlujoCaja" Type="GyMModel.Store.T_FlujoCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoCambio">
+              <PropertyRef Name="T_TipoCambio_ID" />
+            </Principal>
+            <Dependent Role="T_FlujoCaja">
+              <PropertyRef Name="T_TipoCambio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Material99">
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="1" />
+          <End Role="T_Material" Type="GyMModel.Store.T_Material" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Material">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanEmpleadosActividad58">
+          <End Role="T_Empleado" Type="GyMModel.Store.T_Empleado" Multiplicity="1" />
+          <End Role="T_PlanEmpleadosActividad" Type="GyMModel.Store.T_PlanEmpleadosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empleado">
+              <PropertyRef Name="codEmp" />
+            </Principal>
+            <Dependent Role="T_PlanEmpleadosActividad">
+              <PropertyRef Name="codEmp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanEmpleadosActividad59">
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanEmpleadosActividad" Type="GyMModel.Store.T_PlanEmpleadosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanEmpleadosActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanProyecto54">
+          <End Role="T_Entregable" Type="GyMModel.Store.T_Entregable" Multiplicity="0..1" />
+          <End Role="T_PlanProyecto" Type="GyMModel.Store.T_PlanProyecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Entregable">
+              <PropertyRef Name="codEnt" />
+            </Principal>
+            <Dependent Role="T_PlanProyecto">
+              <PropertyRef Name="codEnt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanProyecto87">
+          <End Role="T_FlujoCaja" Type="GyMModel.Store.T_FlujoCaja" Multiplicity="1" />
+          <End Role="T_PlanProyecto" Type="GyMModel.Store.T_PlanProyecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FlujoCaja">
+              <PropertyRef Name="codFluCaj" />
+            </Principal>
+            <Dependent Role="T_PlanProyecto">
+              <PropertyRef Name="codFluCaj" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanRecursosActividad95">
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="1" />
+          <End Role="T_PlanRecursosActividad" Type="GyMModel.Store.T_PlanRecursosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_PlanRecursosActividad">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanRecursosActividad96">
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanRecursosActividad" Type="GyMModel.Store.T_PlanRecursosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanRecursosActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanSubcontratasActivi77">
+          <End Role="T_Proveedor" Type="GyMModel.Store.T_Proveedor" Multiplicity="1" />
+          <End Role="T_PlanSubcontratasActividad" Type="GyMModel.Store.T_PlanSubcontratasActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Proveedor">
+              <PropertyRef Name="codProv" />
+            </Principal>
+            <Dependent Role="T_PlanSubcontratasActividad">
+              <PropertyRef Name="codProv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanSubcontratasActivi78">
+          <End Role="T_Actividad" Type="GyMModel.Store.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanSubcontratasActividad" Type="GyMModel.Store.T_PlanSubcontratasActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanSubcontratasActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Presupuesto93">
+          <End Role="T_TipoMoneda" Type="GyMModel.Store.T_TipoMoneda" Multiplicity="1" />
+          <End Role="T_Presupuesto" Type="GyMModel.Store.T_Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoMoneda">
+              <PropertyRef Name="codTipMon" />
+            </Principal>
+            <Dependent Role="T_Presupuesto">
+              <PropertyRef Name="codTipMon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor80">
+          <End Role="T_TipoDocumentoIdentidad" Type="GyMModel.Store.T_TipoDocumentoIdentidad" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.Store.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoDocumentoIdentidad">
+              <PropertyRef Name="codTipDocIde" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="codTipDocIde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor83">
+          <End Role="T_TipoRecurso" Type="GyMModel.Store.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.Store.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor84">
+          <End Role="T_TipoRecurso" Type="GyMModel.Store.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.Store.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="T_TipoRecurso_T_TipoRecurso_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Recurso85">
+          <End Role="T_TipoRecurso" Type="GyMModel.Store.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Recurso" Type="GyMModel.Store.T_Recurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Recurso">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Requerimiento82">
+          <End Role="T_TipoRecurso" Type="GyMModel.Store.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Requerimiento" Type="GyMModel.Store.T_Requerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Requerimiento">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_TipoRecurso79">
+          <End Role="T_Proveedor" Type="GyMModel.Store.T_Proveedor" Multiplicity="0..1" />
+          <End Role="T_TipoRecurso" Type="GyMModel.Store.T_TipoRecurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Proveedor">
+              <PropertyRef Name="codProv" />
+            </Principal>
+            <Dependent Role="T_TipoRecurso">
+              <PropertyRef Name="codPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GyMModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GyMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Actividad" EntityType="GyMModel.T_Actividad" />
+          <EntitySet Name="T_Articulo" EntityType="GyMModel.T_Articulo" />
+          <EntitySet Name="T_Cargo" EntityType="GyMModel.T_Cargo" />
+          <EntitySet Name="T_DetallePresupuesto" EntityType="GyMModel.T_DetallePresupuesto" />
+          <EntitySet Name="T_DetalleRequerimiento" EntityType="GyMModel.T_DetalleRequerimiento" />
+          <EntitySet Name="T_Empleado" EntityType="GyMModel.T_Empleado" />
+          <EntitySet Name="T_Entregable" EntityType="GyMModel.T_Entregable" />
+          <EntitySet Name="T_Equipo" EntityType="GyMModel.T_Equipo" />
+          <EntitySet Name="T_FlujoCaja" EntityType="GyMModel.T_FlujoCaja" />
+          <EntitySet Name="T_Material" EntityType="GyMModel.T_Material" />
+          <EntitySet Name="T_PlanEmpleadosActividad" EntityType="GyMModel.T_PlanEmpleadosActividad" />
+          <EntitySet Name="T_PlanProyecto" EntityType="GyMModel.T_PlanProyecto" />
+          <EntitySet Name="T_PlanRecursosActividad" EntityType="GyMModel.T_PlanRecursosActividad" />
+          <EntitySet Name="T_PlanSubcontratasActividad" EntityType="GyMModel.T_PlanSubcontratasActividad" />
+          <EntitySet Name="T_Presupuesto" EntityType="GyMModel.T_Presupuesto" />
+          <EntitySet Name="T_Proveedor" EntityType="GyMModel.T_Proveedor" />
+          <EntitySet Name="T_Proyecto" EntityType="GyMModel.T_Proyecto" />
+          <EntitySet Name="T_Recurso" EntityType="GyMModel.T_Recurso" />
+          <EntitySet Name="T_Requerimiento" EntityType="GyMModel.T_Requerimiento" />
+          <EntitySet Name="T_TipoCambio" EntityType="GyMModel.T_TipoCambio" />
+          <EntitySet Name="T_TipoDocumentoIdentidad" EntityType="GyMModel.T_TipoDocumentoIdentidad" />
+          <EntitySet Name="T_TipoMoneda" EntityType="GyMModel.T_TipoMoneda" />
+          <EntitySet Name="T_TipoProyecto" EntityType="GyMModel.T_TipoProyecto" />
+          <EntitySet Name="T_TipoRecurso" EntityType="GyMModel.T_TipoRecurso" />
+          <EntitySet Name="T_Ubigeo" EntityType="GyMModel.T_Ubigeo" />
+          <EntitySet Name="T_VariablesPresupuesto" EntityType="GyMModel.T_VariablesPresupuesto" />
+          <AssociationSet Name="FK_T_Actividad55" Association="GyMModel.FK_T_Actividad55">
+            <End Role="T_Entregable" EntitySet="T_Entregable" />
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Actividad65" Association="GyMModel.FK_T_Actividad65">
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado57" Association="GyMModel.FK_T_Empleado57">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanEmpleadosActividad59" Association="GyMModel.FK_T_PlanEmpleadosActividad59">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanEmpleadosActividad" EntitySet="T_PlanEmpleadosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanRecursosActividad96" Association="GyMModel.FK_T_PlanRecursosActividad96">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanRecursosActividad" EntitySet="T_PlanRecursosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanSubcontratasActivi78" Association="GyMModel.FK_T_PlanSubcontratasActivi78">
+            <End Role="T_Actividad" EntitySet="T_Actividad" />
+            <End Role="T_PlanSubcontratasActividad" EntitySet="T_PlanSubcontratasActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Articulo98" Association="GyMModel.FK_T_Articulo98">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Articulo" EntitySet="T_Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento64" Association="GyMModel.FK_T_DetalleRequerimiento64">
+            <End Role="T_Cargo" EntitySet="T_Cargo" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado63" Association="GyMModel.FK_T_Empleado63">
+            <End Role="T_Cargo" EntitySet="T_Cargo" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePresupuesto91" Association="GyMModel.FK_T_DetallePresupuesto91">
+            <End Role="T_Presupuesto" EntitySet="T_Presupuesto" />
+            <End Role="T_DetallePresupuesto" EntitySet="T_DetallePresupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetallePresupuesto92" Association="GyMModel.FK_T_DetallePresupuesto92">
+            <End Role="T_VariablesPresupuesto" EntitySet="T_VariablesPresupuesto" />
+            <End Role="T_DetallePresupuesto" EntitySet="T_DetallePresupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento60" Association="GyMModel.FK_T_DetalleRequerimiento60">
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento66" Association="GyMModel.FK_T_DetalleRequerimiento66">
+            <End Role="T_Requerimiento" EntitySet="T_Requerimiento" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DetalleRequerimiento94" Association="GyMModel.FK_T_DetalleRequerimiento94">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_DetalleRequerimiento" EntitySet="T_DetalleRequerimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Empleado81" Association="GyMModel.FK_T_Empleado81">
+            <End Role="T_TipoDocumentoIdentidad" EntitySet="T_TipoDocumentoIdentidad" />
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanEmpleadosActividad58" Association="GyMModel.FK_T_PlanEmpleadosActividad58">
+            <End Role="T_Empleado" EntitySet="T_Empleado" />
+            <End Role="T_PlanEmpleadosActividad" EntitySet="T_PlanEmpleadosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanProyecto54" Association="GyMModel.FK_T_PlanProyecto54">
+            <End Role="T_Entregable" EntitySet="T_Entregable" />
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Equipo97" Association="GyMModel.FK_T_Equipo97">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Equipo" EntitySet="T_Equipo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_FlujoCaja90" Association="GyMModel.FK_T_FlujoCaja90">
+            <End Role="T_TipoCambio" EntitySet="T_TipoCambio" />
+            <End Role="T_FlujoCaja" EntitySet="T_FlujoCaja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanProyecto87" Association="GyMModel.FK_T_PlanProyecto87">
+            <End Role="T_FlujoCaja" EntitySet="T_FlujoCaja" />
+            <End Role="T_PlanProyecto" EntitySet="T_PlanProyecto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Material99" Association="GyMModel.FK_T_Material99">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_Material" EntitySet="T_Material" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanRecursosActividad95" Association="GyMModel.FK_T_PlanRecursosActividad95">
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+            <End Role="T_PlanRecursosActividad" EntitySet="T_PlanRecursosActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PlanSubcontratasActivi77" Association="GyMModel.FK_T_PlanSubcontratasActivi77">
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+            <End Role="T_PlanSubcontratasActividad" EntitySet="T_PlanSubcontratasActividad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Presupuesto93" Association="GyMModel.FK_T_Presupuesto93">
+            <End Role="T_TipoMoneda" EntitySet="T_TipoMoneda" />
+            <End Role="T_Presupuesto" EntitySet="T_Presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor80" Association="GyMModel.FK_T_Proveedor80">
+            <End Role="T_TipoDocumentoIdentidad" EntitySet="T_TipoDocumentoIdentidad" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor83" Association="GyMModel.FK_T_Proveedor83">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Proveedor84" Association="GyMModel.FK_T_Proveedor84">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_TipoRecurso79" Association="GyMModel.FK_T_TipoRecurso79">
+            <End Role="T_Proveedor" EntitySet="T_Proveedor" />
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Recurso85" Association="GyMModel.FK_T_Recurso85">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Recurso" EntitySet="T_Recurso" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_Requerimiento82" Association="GyMModel.FK_T_Requerimiento82">
+            <End Role="T_TipoRecurso" EntitySet="T_TipoRecurso" />
+            <End Role="T_Requerimiento" EntitySet="T_Requerimiento" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="T_Actividad">
+          <Key>
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="codAct" Type="Int32" Nullable="false" />
+          <Property Name="corAct" Type="Int32" Nullable="false" />
+          <Property Name="desAct" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="feciniAct" Type="DateTime" Nullable="false" />
+          <Property Name="fecfinAct" Type="DateTime" Nullable="false" />
+          <Property Name="preAct" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="tipAct" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="codEnt" Type="Int32" Nullable="false" />
+          <Property Name="codPlaPro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Entregable" Relationship="GyMModel.FK_T_Actividad55" FromRole="T_Actividad" ToRole="T_Entregable" />
+          <NavigationProperty Name="T_PlanProyecto" Relationship="GyMModel.FK_T_Actividad65" FromRole="T_Actividad" ToRole="T_PlanProyecto" />
+          <NavigationProperty Name="T_Empleado" Relationship="GyMModel.FK_T_Empleado57" FromRole="T_Actividad" ToRole="T_Empleado" />
+          <NavigationProperty Name="T_PlanEmpleadosActividad" Relationship="GyMModel.FK_T_PlanEmpleadosActividad59" FromRole="T_Actividad" ToRole="T_PlanEmpleadosActividad" />
+          <NavigationProperty Name="T_PlanRecursosActividad" Relationship="GyMModel.FK_T_PlanRecursosActividad96" FromRole="T_Actividad" ToRole="T_PlanRecursosActividad" />
+          <NavigationProperty Name="T_PlanSubcontratasActividad" Relationship="GyMModel.FK_T_PlanSubcontratasActivi78" FromRole="T_Actividad" ToRole="T_PlanSubcontratasActividad" />
+        </EntityType>
+        <EntityType Name="T_Articulo">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="unimedinvArt" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_Articulo98" FromRole="T_Articulo" ToRole="T_Recurso" />
+        </EntityType>
+        <EntityType Name="T_Cargo">
+          <Key>
+            <PropertyRef Name="codCar" />
+          </Key>
+          <Property Name="nomCar" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="desCar" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codCar" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_DetalleRequerimiento" Relationship="GyMModel.FK_T_DetalleRequerimiento64" FromRole="T_Cargo" ToRole="T_DetalleRequerimiento" />
+          <NavigationProperty Name="T_Empleado" Relationship="GyMModel.FK_T_Empleado63" FromRole="T_Cargo" ToRole="T_Empleado" />
+        </EntityType>
+        <EntityType Name="T_DetallePresupuesto">
+          <Key>
+            <PropertyRef Name="codPre" />
+          </Key>
+          <Property Name="codDetPre" Type="Int32" Nullable="false" />
+          <Property Name="desDetPre" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="porDetPre" Type="Double" Nullable="false" />
+          <Property Name="valDetPre" Type="Double" Nullable="false" />
+          <Property Name="codPre" Type="Int32" Nullable="false" />
+          <Property Name="codVarPre" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Presupuesto" Relationship="GyMModel.FK_T_DetallePresupuesto91" FromRole="T_DetallePresupuesto" ToRole="T_Presupuesto" />
+          <NavigationProperty Name="T_VariablesPresupuesto" Relationship="GyMModel.FK_T_DetallePresupuesto92" FromRole="T_DetallePresupuesto" ToRole="T_VariablesPresupuesto" />
+        </EntityType>
+        <EntityType Name="T_DetalleRequerimiento">
+          <Key>
+            <PropertyRef Name="codReq" />
+          </Key>
+          <Property Name="codcorDetReq" Type="Int16" Nullable="false" />
+          <Property Name="canDetReq" Type="Int16" Nullable="false" />
+          <Property Name="codEmp" Type="Int32" Nullable="false" />
+          <Property Name="codCar" Type="Int32" Nullable="false" />
+          <Property Name="codReq" Type="Int32" Nullable="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Cargo" Relationship="GyMModel.FK_T_DetalleRequerimiento64" FromRole="T_DetalleRequerimiento" ToRole="T_Cargo" />
+          <NavigationProperty Name="T_Empleado" Relationship="GyMModel.FK_T_DetalleRequerimiento60" FromRole="T_DetalleRequerimiento" ToRole="T_Empleado" />
+          <NavigationProperty Name="T_Requerimiento" Relationship="GyMModel.FK_T_DetalleRequerimiento66" FromRole="T_DetalleRequerimiento" ToRole="T_Requerimiento" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_DetalleRequerimiento94" FromRole="T_DetalleRequerimiento" ToRole="T_Recurso" />
+        </EntityType>
+        <EntityType Name="T_Empleado">
+          <Key>
+            <PropertyRef Name="codEmp" />
+          </Key>
+          <Property Name="areEmp" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="nomEmp" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="apepatEmp" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="apematEmp" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="fecnacEmp" Type="DateTime" Nullable="false" />
+          <Property Name="fecinglabEmp" Type="DateTime" Nullable="false" />
+          <Property Name="dniEmp" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codEmp" Type="Int32" Nullable="false" />
+          <Property Name="codCar" Type="Int32" Nullable="false" />
+          <Property Name="codPlaPro" Type="Int32" />
+          <Property Name="codTipDocIde" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_Empleado57" FromRole="T_Empleado" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_Cargo" Relationship="GyMModel.FK_T_Empleado63" FromRole="T_Empleado" ToRole="T_Cargo" />
+          <NavigationProperty Name="T_DetalleRequerimiento" Relationship="GyMModel.FK_T_DetalleRequerimiento60" FromRole="T_Empleado" ToRole="T_DetalleRequerimiento" />
+          <NavigationProperty Name="T_TipoDocumentoIdentidad" Relationship="GyMModel.FK_T_Empleado81" FromRole="T_Empleado" ToRole="T_TipoDocumentoIdentidad" />
+          <NavigationProperty Name="T_PlanEmpleadosActividad" Relationship="GyMModel.FK_T_PlanEmpleadosActividad58" FromRole="T_Empleado" ToRole="T_PlanEmpleadosActividad" />
+        </EntityType>
+        <EntityType Name="T_Entregable">
+          <Key>
+            <PropertyRef Name="codEnt" />
+          </Key>
+          <Property Name="nomEnt" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="desEnt" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codEnt" Type="Int32" Nullable="false" />
+          <Property Name="codPro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_Actividad55" FromRole="T_Entregable" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_PlanProyecto" Relationship="GyMModel.FK_T_PlanProyecto54" FromRole="T_Entregable" ToRole="T_PlanProyecto" />
+        </EntityType>
+        <EntityType Name="T_Equipo">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="marEqu" Type="Int32" Nullable="false" />
+          <Property Name="fecadqEqu" Type="DateTime" Nullable="false" />
+          <Property Name="TipEqu" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="aniEqu" Type="DateTime" Nullable="false" />
+          <Property Name="modEqu" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_Equipo97" FromRole="T_Equipo" ToRole="T_Recurso" />
+        </EntityType>
+        <EntityType Name="T_FlujoCaja">
+          <Key>
+            <PropertyRef Name="codFluCaj" />
+          </Key>
+          <Property Name="feciniFluCaj" Type="DateTime" Nullable="false" />
+          <Property Name="fecfinFluCaj" Type="DateTime" Nullable="false" />
+          <Property Name="facFluCaj" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="true" />
+          <Property Name="pretotFluCaj" Type="Double" Nullable="false" />
+          <Property Name="deptotFluCaj" Type="Double" Nullable="false" />
+          <Property Name="gastotFluCaj" Type="Double" Nullable="false" />
+          <Property Name="baltotFluCaj" Type="Double" Nullable="false" />
+          <Property Name="depFluCaj" Type="Double" Nullable="false" />
+          <Property Name="tr1FluCaj" Type="Double" Nullable="false" />
+          <Property Name="tr2FluCaj" Type="Double" Nullable="false" />
+          <Property Name="tr3FluCaj" Type="Double" Nullable="false" />
+          <Property Name="tr4FluCaj" Type="Double" Nullable="false" />
+          <Property Name="codFluCaj" Type="Int32" Nullable="false" />
+          <Property Name="T_TipoCambio_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_TipoCambio" Relationship="GyMModel.FK_T_FlujoCaja90" FromRole="T_FlujoCaja" ToRole="T_TipoCambio" />
+          <NavigationProperty Name="T_PlanProyecto" Relationship="GyMModel.FK_T_PlanProyecto87" FromRole="T_FlujoCaja" ToRole="T_PlanProyecto" />
+        </EntityType>
+        <EntityType Name="T_Material">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="marMat" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="tipMat" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="modMat" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="unimedMat" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_Material99" FromRole="T_Material" ToRole="T_Recurso" />
+        </EntityType>
+        <EntityType Name="T_PlanEmpleadosActividad">
+          <Key>
+            <PropertyRef Name="codEmp" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="horasiPlaEmpAct" Type="Double" Nullable="false" />
+          <Property Name="codEmp" Type="Int32" Nullable="false" />
+          <Property Name="codPlaPro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_PlanEmpleadosActividad59" FromRole="T_PlanEmpleadosActividad" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_Empleado" Relationship="GyMModel.FK_T_PlanEmpleadosActividad58" FromRole="T_PlanEmpleadosActividad" ToRole="T_Empleado" />
+        </EntityType>
+        <EntityType Name="T_PlanProyecto">
+          <Key>
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="desPlaPro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codPlaPro" Type="Int32" Nullable="false" />
+          <Property Name="codPro" Type="Int32" Nullable="false" />
+          <Property Name="codEnt" Type="Int32" />
+          <Property Name="codFluCaj" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_Actividad65" FromRole="T_PlanProyecto" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_Entregable" Relationship="GyMModel.FK_T_PlanProyecto54" FromRole="T_PlanProyecto" ToRole="T_Entregable" />
+          <NavigationProperty Name="T_FlujoCaja" Relationship="GyMModel.FK_T_PlanProyecto87" FromRole="T_PlanProyecto" ToRole="T_FlujoCaja" />
+        </EntityType>
+        <EntityType Name="T_PlanRecursosActividad">
+          <Key>
+            <PropertyRef Name="codRec" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="cantidad" Type="Int16" Nullable="false" />
+          <Property Name="horasiPlaEquAct" Type="Double" Nullable="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <Property Name="codPlaPro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_PlanRecursosActividad96" FromRole="T_PlanRecursosActividad" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_PlanRecursosActividad95" FromRole="T_PlanRecursosActividad" ToRole="T_Recurso" />
+        </EntityType>
+        <EntityType Name="T_PlanSubcontratasActividad">
+          <Key>
+            <PropertyRef Name="codProv" />
+            <PropertyRef Name="codPlaPro" />
+          </Key>
+          <Property Name="canPlaSubCon" Type="Int16" Nullable="false" />
+          <Property Name="horasiPlaSubCon" Type="Double" Nullable="false" />
+          <Property Name="codProv" Type="Int32" Nullable="false" />
+          <Property Name="codPlaPro" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Actividad" Relationship="GyMModel.FK_T_PlanSubcontratasActivi78" FromRole="T_PlanSubcontratasActividad" ToRole="T_Actividad" />
+          <NavigationProperty Name="T_Proveedor" Relationship="GyMModel.FK_T_PlanSubcontratasActivi77" FromRole="T_PlanSubcontratasActividad" ToRole="T_Proveedor" />
+        </EntityType>
+        <EntityType Name="T_Presupuesto">
+          <Key>
+            <PropertyRef Name="codPre" />
+          </Key>
+          <Property Name="verPre" Type="Int32" Nullable="false" />
+          <Property Name="fecPre" Type="DateTime" Nullable="false" />
+          <Property Name="monPre" Type="Double" Nullable="false" />
+          <Property Name="impPre" Type="Double" Nullable="false" />
+          <Property Name="estPre" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="nroordejePre" Type="Int32" Nullable="false" />
+          <Property Name="impconPre" Type="Double" Nullable="false" />
+          <Property Name="codPre" Type="Int32" Nullable="false" />
+          <Property Name="codPro" Type="Int32" Nullable="false" />
+          <Property Name="codTipMon" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_DetallePresupuesto" Relationship="GyMModel.FK_T_DetallePresupuesto91" FromRole="T_Presupuesto" ToRole="T_DetallePresupuesto" />
+          <NavigationProperty Name="T_TipoMoneda" Relationship="GyMModel.FK_T_Presupuesto93" FromRole="T_Presupuesto" ToRole="T_TipoMoneda" />
+        </EntityType>
+        <EntityType Name="T_Proveedor">
+          <Key>
+            <PropertyRef Name="codProv" />
+          </Key>
+          <Property Name="rucPro" Type="Int32" Nullable="false" />
+          <Property Name="razsocPro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="dirPro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codProv" Type="Int32" Nullable="false" />
+          <Property Name="codTipDocIde" Type="Int32" Nullable="false" />
+          <Property Name="codTipRec" Type="Int32" Nullable="false" />
+          <Property Name="T_TipoRecurso_T_TipoRecurso_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_PlanSubcontratasActividad" Relationship="GyMModel.FK_T_PlanSubcontratasActivi77" FromRole="T_Proveedor" ToRole="T_PlanSubcontratasActividad" />
+          <NavigationProperty Name="T_TipoDocumentoIdentidad" Relationship="GyMModel.FK_T_Proveedor80" FromRole="T_Proveedor" ToRole="T_TipoDocumentoIdentidad" />
+          <NavigationProperty Name="T_TipoRecurso" Relationship="GyMModel.FK_T_Proveedor83" FromRole="T_Proveedor" ToRole="T_TipoRecurso" />
+          <NavigationProperty Name="T_TipoRecurso1" Relationship="GyMModel.FK_T_Proveedor84" FromRole="T_Proveedor" ToRole="T_TipoRecurso" />
+          <NavigationProperty Name="T_TipoRecurso2" Relationship="GyMModel.FK_T_TipoRecurso79" FromRole="T_Proveedor" ToRole="T_TipoRecurso" />
+        </EntityType>
+        <EntityType Name="T_Proyecto">
+          <Key>
+            <PropertyRef Name="codPro" />
+          </Key>
+          <Property Name="codPro" Type="Int32" Nullable="false" />
+          <Property Name="nomPro" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="feciniplaPro" Type="DateTime" />
+          <Property Name="fecfinplaPro" Type="DateTime" />
+          <Property Name="fecinireaPro" Type="DateTime" />
+          <Property Name="fecfinreaPro" Type="DateTime" />
+          <Property Name="priPro" Type="Int32" />
+          <Property Name="razsocfacPro" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="conpagPro" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="monfacPro" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="T_Recurso">
+          <Key>
+            <PropertyRef Name="codRec" />
+          </Key>
+          <Property Name="desRec" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="preRec" Type="Double" Nullable="false" />
+          <Property Name="codRec" Type="Int32" Nullable="false" />
+          <Property Name="codTipRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Articulo" Relationship="GyMModel.FK_T_Articulo98" FromRole="T_Recurso" ToRole="T_Articulo" />
+          <NavigationProperty Name="T_DetalleRequerimiento" Relationship="GyMModel.FK_T_DetalleRequerimiento94" FromRole="T_Recurso" ToRole="T_DetalleRequerimiento" />
+          <NavigationProperty Name="T_Equipo" Relationship="GyMModel.FK_T_Equipo97" FromRole="T_Recurso" ToRole="T_Equipo" />
+          <NavigationProperty Name="T_Material" Relationship="GyMModel.FK_T_Material99" FromRole="T_Recurso" ToRole="T_Material" />
+          <NavigationProperty Name="T_PlanRecursosActividad" Relationship="GyMModel.FK_T_PlanRecursosActividad95" FromRole="T_Recurso" ToRole="T_PlanRecursosActividad" />
+          <NavigationProperty Name="T_TipoRecurso" Relationship="GyMModel.FK_T_Recurso85" FromRole="T_Recurso" ToRole="T_TipoRecurso" />
+        </EntityType>
+        <EntityType Name="T_Requerimiento">
+          <Key>
+            <PropertyRef Name="codReq" />
+          </Key>
+          <Property Name="desReq" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="fecReq" Type="DateTime" Nullable="false" />
+          <Property Name="priReq" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="codReq" Type="Int32" Nullable="false" />
+          <Property Name="codPro" Type="Int32" Nullable="false" />
+          <Property Name="codTipRec" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_DetalleRequerimiento" Relationship="GyMModel.FK_T_DetalleRequerimiento66" FromRole="T_Requerimiento" ToRole="T_DetalleRequerimiento" />
+          <NavigationProperty Name="T_TipoRecurso" Relationship="GyMModel.FK_T_Requerimiento82" FromRole="T_Requerimiento" ToRole="T_TipoRecurso" />
+        </EntityType>
+        <EntityType Name="T_TipoCambio">
+          <Key>
+            <PropertyRef Name="T_TipoCambio_ID" />
+          </Key>
+          <Property Name="fecTipCam" Type="DateTime" Nullable="false" />
+          <Property Name="valcomTipCam" Type="Double" Nullable="false" />
+          <Property Name="valvenTipCam" Type="Double" Nullable="false" />
+          <Property Name="T_TipoCambio_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_FlujoCaja" Relationship="GyMModel.FK_T_FlujoCaja90" FromRole="T_TipoCambio" ToRole="T_FlujoCaja" />
+        </EntityType>
+        <EntityType Name="T_TipoDocumentoIdentidad">
+          <Key>
+            <PropertyRef Name="codTipDocIde" />
+          </Key>
+          <Property Name="nomTipDocIde" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="desTipDocIde" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codTipDocIde" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Empleado" Relationship="GyMModel.FK_T_Empleado81" FromRole="T_TipoDocumentoIdentidad" ToRole="T_Empleado" />
+          <NavigationProperty Name="T_Proveedor" Relationship="GyMModel.FK_T_Proveedor80" FromRole="T_TipoDocumentoIdentidad" ToRole="T_Proveedor" />
+        </EntityType>
+        <EntityType Name="T_TipoMoneda">
+          <Key>
+            <PropertyRef Name="codTipMon" />
+          </Key>
+          <Property Name="monTipMon" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="desTipMon" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="codTipMon" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_Presupuesto" Relationship="GyMModel.FK_T_Presupuesto93" FromRole="T_TipoMoneda" ToRole="T_Presupuesto" />
+        </EntityType>
+        <EntityType Name="T_TipoProyecto">
+          <Key>
+            <PropertyRef Name="codTipPro" />
+          </Key>
+          <Property Name="nomTipPro" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="desTipPro" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codTipPro" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_TipoRecurso">
+          <Key>
+            <PropertyRef Name="codTipRec" />
+          </Key>
+          <Property Name="nomTipRec" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="desTipRec" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codTipRec" Type="Int32" Nullable="false" />
+          <Property Name="codPro" Type="Int32" />
+          <NavigationProperty Name="T_Proveedor" Relationship="GyMModel.FK_T_Proveedor83" FromRole="T_TipoRecurso" ToRole="T_Proveedor" />
+          <NavigationProperty Name="T_Proveedor1" Relationship="GyMModel.FK_T_Proveedor84" FromRole="T_TipoRecurso" ToRole="T_Proveedor" />
+          <NavigationProperty Name="T_Proveedor2" Relationship="GyMModel.FK_T_TipoRecurso79" FromRole="T_TipoRecurso" ToRole="T_Proveedor" />
+          <NavigationProperty Name="T_Recurso" Relationship="GyMModel.FK_T_Recurso85" FromRole="T_TipoRecurso" ToRole="T_Recurso" />
+          <NavigationProperty Name="T_Requerimiento" Relationship="GyMModel.FK_T_Requerimiento82" FromRole="T_TipoRecurso" ToRole="T_Requerimiento" />
+        </EntityType>
+        <EntityType Name="T_Ubigeo">
+          <Key>
+            <PropertyRef Name="codUbiProv" />
+            <PropertyRef Name="codUbiDist" />
+            <PropertyRef Name="codUbiDep" />
+          </Key>
+          <Property Name="nomUbi" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="codposUbi" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="true" />
+          <Property Name="codUbiProv" Type="Int32" Nullable="false" />
+          <Property Name="codUbiDist" Type="Int32" Nullable="false" />
+          <Property Name="codUbiDep" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_VariablesPresupuesto">
+          <Key>
+            <PropertyRef Name="codVarPre" />
+          </Key>
+          <Property Name="desVarPre" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="codVarPre" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="T_DetallePresupuesto" Relationship="GyMModel.FK_T_DetallePresupuesto92" FromRole="T_VariablesPresupuesto" ToRole="T_DetallePresupuesto" />
+        </EntityType>
+        <Association Name="FK_T_Actividad55">
+          <End Role="T_Entregable" Type="GyMModel.T_Entregable" Multiplicity="1" />
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Entregable">
+              <PropertyRef Name="codEnt" />
+            </Principal>
+            <Dependent Role="T_Actividad">
+              <PropertyRef Name="codEnt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Actividad65">
+          <End Role="T_PlanProyecto" Type="GyMModel.T_PlanProyecto" Multiplicity="1" />
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_PlanProyecto">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado57">
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="0..1" />
+          <End Role="T_Empleado" Type="GyMModel.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanEmpleadosActividad59">
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanEmpleadosActividad" Type="GyMModel.T_PlanEmpleadosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanEmpleadosActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanRecursosActividad96">
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanRecursosActividad" Type="GyMModel.T_PlanRecursosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanRecursosActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanSubcontratasActivi78">
+          <End Role="T_Actividad" Type="GyMModel.T_Actividad" Multiplicity="1" />
+          <End Role="T_PlanSubcontratasActividad" Type="GyMModel.T_PlanSubcontratasActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Actividad">
+              <PropertyRef Name="codPlaPro" />
+            </Principal>
+            <Dependent Role="T_PlanSubcontratasActividad">
+              <PropertyRef Name="codPlaPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Articulo98">
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="1" />
+          <End Role="T_Articulo" Type="GyMModel.T_Articulo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Articulo">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento64">
+          <End Role="T_Cargo" Type="GyMModel.T_Cargo" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Cargo">
+              <PropertyRef Name="codCar" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado63">
+          <End Role="T_Cargo" Type="GyMModel.T_Cargo" Multiplicity="1" />
+          <End Role="T_Empleado" Type="GyMModel.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Cargo">
+              <PropertyRef Name="codCar" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codCar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePresupuesto91">
+          <End Role="T_Presupuesto" Type="GyMModel.T_Presupuesto" Multiplicity="1" />
+          <End Role="T_DetallePresupuesto" Type="GyMModel.T_DetallePresupuesto" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Presupuesto">
+              <PropertyRef Name="codPre" />
+            </Principal>
+            <Dependent Role="T_DetallePresupuesto">
+              <PropertyRef Name="codPre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetallePresupuesto92">
+          <End Role="T_VariablesPresupuesto" Type="GyMModel.T_VariablesPresupuesto" Multiplicity="1" />
+          <End Role="T_DetallePresupuesto" Type="GyMModel.T_DetallePresupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_VariablesPresupuesto">
+              <PropertyRef Name="codVarPre" />
+            </Principal>
+            <Dependent Role="T_DetallePresupuesto">
+              <PropertyRef Name="codVarPre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento60">
+          <End Role="T_Empleado" Type="GyMModel.T_Empleado" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empleado">
+              <PropertyRef Name="codEmp" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codEmp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento66">
+          <End Role="T_Requerimiento" Type="GyMModel.T_Requerimiento" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.T_DetalleRequerimiento" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Requerimiento">
+              <PropertyRef Name="codReq" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codReq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DetalleRequerimiento94">
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="1" />
+          <End Role="T_DetalleRequerimiento" Type="GyMModel.T_DetalleRequerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_DetalleRequerimiento">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Empleado81">
+          <End Role="T_TipoDocumentoIdentidad" Type="GyMModel.T_TipoDocumentoIdentidad" Multiplicity="1" />
+          <End Role="T_Empleado" Type="GyMModel.T_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoDocumentoIdentidad">
+              <PropertyRef Name="codTipDocIde" />
+            </Principal>
+            <Dependent Role="T_Empleado">
+              <PropertyRef Name="codTipDocIde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanEmpleadosActividad58">
+          <End Role="T_Empleado" Type="GyMModel.T_Empleado" Multiplicity="1" />
+          <End Role="T_PlanEmpleadosActividad" Type="GyMModel.T_PlanEmpleadosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Empleado">
+              <PropertyRef Name="codEmp" />
+            </Principal>
+            <Dependent Role="T_PlanEmpleadosActividad">
+              <PropertyRef Name="codEmp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanProyecto54">
+          <End Role="T_Entregable" Type="GyMModel.T_Entregable" Multiplicity="0..1" />
+          <End Role="T_PlanProyecto" Type="GyMModel.T_PlanProyecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Entregable">
+              <PropertyRef Name="codEnt" />
+            </Principal>
+            <Dependent Role="T_PlanProyecto">
+              <PropertyRef Name="codEnt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Equipo97">
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="1" />
+          <End Role="T_Equipo" Type="GyMModel.T_Equipo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Equipo">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_FlujoCaja90">
+          <End Role="T_TipoCambio" Type="GyMModel.T_TipoCambio" Multiplicity="1" />
+          <End Role="T_FlujoCaja" Type="GyMModel.T_FlujoCaja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoCambio">
+              <PropertyRef Name="T_TipoCambio_ID" />
+            </Principal>
+            <Dependent Role="T_FlujoCaja">
+              <PropertyRef Name="T_TipoCambio_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanProyecto87">
+          <End Role="T_FlujoCaja" Type="GyMModel.T_FlujoCaja" Multiplicity="1" />
+          <End Role="T_PlanProyecto" Type="GyMModel.T_PlanProyecto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_FlujoCaja">
+              <PropertyRef Name="codFluCaj" />
+            </Principal>
+            <Dependent Role="T_PlanProyecto">
+              <PropertyRef Name="codFluCaj" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Material99">
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="1" />
+          <End Role="T_Material" Type="GyMModel.T_Material" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_Material">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanRecursosActividad95">
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="1" />
+          <End Role="T_PlanRecursosActividad" Type="GyMModel.T_PlanRecursosActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Recurso">
+              <PropertyRef Name="codRec" />
+            </Principal>
+            <Dependent Role="T_PlanRecursosActividad">
+              <PropertyRef Name="codRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PlanSubcontratasActivi77">
+          <End Role="T_Proveedor" Type="GyMModel.T_Proveedor" Multiplicity="1" />
+          <End Role="T_PlanSubcontratasActividad" Type="GyMModel.T_PlanSubcontratasActividad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Proveedor">
+              <PropertyRef Name="codProv" />
+            </Principal>
+            <Dependent Role="T_PlanSubcontratasActividad">
+              <PropertyRef Name="codProv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Presupuesto93">
+          <End Role="T_TipoMoneda" Type="GyMModel.T_TipoMoneda" Multiplicity="1" />
+          <End Role="T_Presupuesto" Type="GyMModel.T_Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoMoneda">
+              <PropertyRef Name="codTipMon" />
+            </Principal>
+            <Dependent Role="T_Presupuesto">
+              <PropertyRef Name="codTipMon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor80">
+          <End Role="T_TipoDocumentoIdentidad" Type="GyMModel.T_TipoDocumentoIdentidad" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoDocumentoIdentidad">
+              <PropertyRef Name="codTipDocIde" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="codTipDocIde" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor83">
+          <End Role="T_TipoRecurso" Type="GyMModel.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Proveedor84">
+          <End Role="T_TipoRecurso" Type="GyMModel.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Proveedor" Type="GyMModel.T_Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Proveedor">
+              <PropertyRef Name="T_TipoRecurso_T_TipoRecurso_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_TipoRecurso79">
+          <End Role="T_Proveedor" Type="GyMModel.T_Proveedor" Multiplicity="0..1" />
+          <End Role="T_TipoRecurso" Type="GyMModel.T_TipoRecurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_Proveedor">
+              <PropertyRef Name="codProv" />
+            </Principal>
+            <Dependent Role="T_TipoRecurso">
+              <PropertyRef Name="codPro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Recurso85">
+          <End Role="T_TipoRecurso" Type="GyMModel.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Recurso" Type="GyMModel.T_Recurso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Recurso">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_Requerimiento82">
+          <End Role="T_TipoRecurso" Type="GyMModel.T_TipoRecurso" Multiplicity="1" />
+          <End Role="T_Requerimiento" Type="GyMModel.T_Requerimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_TipoRecurso">
+              <PropertyRef Name="codTipRec" />
+            </Principal>
+            <Dependent Role="T_Requerimiento">
+              <PropertyRef Name="codTipRec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GyMModelStoreContainer" CdmEntityContainer="GyMEntities">
+          <EntitySetMapping Name="T_Actividad"><EntityTypeMapping TypeName="GyMModel.T_Actividad"><MappingFragment StoreEntitySet="T_Actividad">
+            <ScalarProperty Name="codAct" ColumnName="codAct" />
+            <ScalarProperty Name="corAct" ColumnName="corAct" />
+            <ScalarProperty Name="desAct" ColumnName="desAct" />
+            <ScalarProperty Name="feciniAct" ColumnName="feciniAct" />
+            <ScalarProperty Name="fecfinAct" ColumnName="fecfinAct" />
+            <ScalarProperty Name="preAct" ColumnName="preAct" />
+            <ScalarProperty Name="tipAct" ColumnName="tipAct" />
+            <ScalarProperty Name="codEnt" ColumnName="codEnt" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Articulo"><EntityTypeMapping TypeName="GyMModel.T_Articulo"><MappingFragment StoreEntitySet="T_Articulo">
+            <ScalarProperty Name="unimedinvArt" ColumnName="unimedinvArt" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Cargo"><EntityTypeMapping TypeName="GyMModel.T_Cargo"><MappingFragment StoreEntitySet="T_Cargo">
+            <ScalarProperty Name="nomCar" ColumnName="nomCar" />
+            <ScalarProperty Name="desCar" ColumnName="desCar" />
+            <ScalarProperty Name="codCar" ColumnName="codCar" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_DetallePresupuesto"><EntityTypeMapping TypeName="GyMModel.T_DetallePresupuesto"><MappingFragment StoreEntitySet="T_DetallePresupuesto">
+            <ScalarProperty Name="codDetPre" ColumnName="codDetPre" />
+            <ScalarProperty Name="desDetPre" ColumnName="desDetPre" />
+            <ScalarProperty Name="porDetPre" ColumnName="porDetPre" />
+            <ScalarProperty Name="valDetPre" ColumnName="valDetPre" />
+            <ScalarProperty Name="codPre" ColumnName="codPre" />
+            <ScalarProperty Name="codVarPre" ColumnName="codVarPre" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_DetalleRequerimiento"><EntityTypeMapping TypeName="GyMModel.T_DetalleRequerimiento"><MappingFragment StoreEntitySet="T_DetalleRequerimiento">
+            <ScalarProperty Name="codcorDetReq" ColumnName="codcorDetReq" />
+            <ScalarProperty Name="canDetReq" ColumnName="canDetReq" />
+            <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+            <ScalarProperty Name="codCar" ColumnName="codCar" />
+            <ScalarProperty Name="codReq" ColumnName="codReq" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Empleado"><EntityTypeMapping TypeName="GyMModel.T_Empleado"><MappingFragment StoreEntitySet="T_Empleado">
+            <ScalarProperty Name="areEmp" ColumnName="areEmp" />
+            <ScalarProperty Name="nomEmp" ColumnName="nomEmp" />
+            <ScalarProperty Name="apepatEmp" ColumnName="apepatEmp" />
+            <ScalarProperty Name="apematEmp" ColumnName="apematEmp" />
+            <ScalarProperty Name="fecnacEmp" ColumnName="fecnacEmp" />
+            <ScalarProperty Name="fecinglabEmp" ColumnName="fecinglabEmp" />
+            <ScalarProperty Name="dniEmp" ColumnName="dniEmp" />
+            <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+            <ScalarProperty Name="codCar" ColumnName="codCar" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+            <ScalarProperty Name="codTipDocIde" ColumnName="codTipDocIde" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Entregable"><EntityTypeMapping TypeName="GyMModel.T_Entregable"><MappingFragment StoreEntitySet="T_Entregable">
+            <ScalarProperty Name="nomEnt" ColumnName="nomEnt" />
+            <ScalarProperty Name="desEnt" ColumnName="desEnt" />
+            <ScalarProperty Name="codEnt" ColumnName="codEnt" />
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Equipo"><EntityTypeMapping TypeName="GyMModel.T_Equipo"><MappingFragment StoreEntitySet="T_Equipo">
+            <ScalarProperty Name="marEqu" ColumnName="marEqu" />
+            <ScalarProperty Name="fecadqEqu" ColumnName="fecadqEqu" />
+            <ScalarProperty Name="TipEqu" ColumnName="TipEqu" />
+            <ScalarProperty Name="aniEqu" ColumnName="aniEqu" />
+            <ScalarProperty Name="modEqu" ColumnName="modEqu" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_FlujoCaja"><EntityTypeMapping TypeName="GyMModel.T_FlujoCaja"><MappingFragment StoreEntitySet="T_FlujoCaja">
+            <ScalarProperty Name="feciniFluCaj" ColumnName="feciniFluCaj" />
+            <ScalarProperty Name="fecfinFluCaj" ColumnName="fecfinFluCaj" />
+            <ScalarProperty Name="facFluCaj" ColumnName="facFluCaj" />
+            <ScalarProperty Name="pretotFluCaj" ColumnName="pretotFluCaj" />
+            <ScalarProperty Name="deptotFluCaj" ColumnName="deptotFluCaj" />
+            <ScalarProperty Name="gastotFluCaj" ColumnName="gastotFluCaj" />
+            <ScalarProperty Name="baltotFluCaj" ColumnName="baltotFluCaj" />
+            <ScalarProperty Name="depFluCaj" ColumnName="depFluCaj" />
+            <ScalarProperty Name="tr1FluCaj" ColumnName="tr1FluCaj" />
+            <ScalarProperty Name="tr2FluCaj" ColumnName="tr2FluCaj" />
+            <ScalarProperty Name="tr3FluCaj" ColumnName="tr3FluCaj" />
+            <ScalarProperty Name="tr4FluCaj" ColumnName="tr4FluCaj" />
+            <ScalarProperty Name="codFluCaj" ColumnName="codFluCaj" />
+            <ScalarProperty Name="T_TipoCambio_ID" ColumnName="T_TipoCambio_ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Material"><EntityTypeMapping TypeName="GyMModel.T_Material"><MappingFragment StoreEntitySet="T_Material">
+            <ScalarProperty Name="marMat" ColumnName="marMat" />
+            <ScalarProperty Name="tipMat" ColumnName="tipMat" />
+            <ScalarProperty Name="modMat" ColumnName="modMat" />
+            <ScalarProperty Name="unimedMat" ColumnName="unimedMat" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_PlanEmpleadosActividad"><EntityTypeMapping TypeName="GyMModel.T_PlanEmpleadosActividad"><MappingFragment StoreEntitySet="T_PlanEmpleadosActividad">
+            <ScalarProperty Name="horasiPlaEmpAct" ColumnName="horasiPlaEmpAct" />
+            <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_PlanProyecto"><EntityTypeMapping TypeName="GyMModel.T_PlanProyecto"><MappingFragment StoreEntitySet="T_PlanProyecto">
+            <ScalarProperty Name="desPlaPro" ColumnName="desPlaPro" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+            <ScalarProperty Name="codEnt" ColumnName="codEnt" />
+            <ScalarProperty Name="codFluCaj" ColumnName="codFluCaj" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_PlanRecursosActividad"><EntityTypeMapping TypeName="GyMModel.T_PlanRecursosActividad"><MappingFragment StoreEntitySet="T_PlanRecursosActividad">
+            <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+            <ScalarProperty Name="horasiPlaEquAct" ColumnName="horasiPlaEquAct" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_PlanSubcontratasActividad"><EntityTypeMapping TypeName="GyMModel.T_PlanSubcontratasActividad"><MappingFragment StoreEntitySet="T_PlanSubcontratasActividad">
+            <ScalarProperty Name="canPlaSubCon" ColumnName="canPlaSubCon" />
+            <ScalarProperty Name="horasiPlaSubCon" ColumnName="horasiPlaSubCon" />
+            <ScalarProperty Name="codProv" ColumnName="codProv" />
+            <ScalarProperty Name="codPlaPro" ColumnName="codPlaPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Presupuesto"><EntityTypeMapping TypeName="GyMModel.T_Presupuesto"><MappingFragment StoreEntitySet="T_Presupuesto">
+            <ScalarProperty Name="verPre" ColumnName="verPre" />
+            <ScalarProperty Name="fecPre" ColumnName="fecPre" />
+            <ScalarProperty Name="monPre" ColumnName="monPre" />
+            <ScalarProperty Name="impPre" ColumnName="impPre" />
+            <ScalarProperty Name="estPre" ColumnName="estPre" />
+            <ScalarProperty Name="nroordejePre" ColumnName="nroordejePre" />
+            <ScalarProperty Name="impconPre" ColumnName="impconPre" />
+            <ScalarProperty Name="codPre" ColumnName="codPre" />
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+            <ScalarProperty Name="codTipMon" ColumnName="codTipMon" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Proveedor"><EntityTypeMapping TypeName="GyMModel.T_Proveedor"><MappingFragment StoreEntitySet="T_Proveedor">
+            <ScalarProperty Name="rucPro" ColumnName="rucPro" />
+            <ScalarProperty Name="razsocPro" ColumnName="razsocPro" />
+            <ScalarProperty Name="dirPro" ColumnName="dirPro" />
+            <ScalarProperty Name="codProv" ColumnName="codProv" />
+            <ScalarProperty Name="codTipDocIde" ColumnName="codTipDocIde" />
+            <ScalarProperty Name="codTipRec" ColumnName="codTipRec" />
+            <ScalarProperty Name="T_TipoRecurso_T_TipoRecurso_ID" ColumnName="T_TipoRecurso_T_TipoRecurso_ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Proyecto"><EntityTypeMapping TypeName="GyMModel.T_Proyecto"><MappingFragment StoreEntitySet="T_Proyecto">
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+            <ScalarProperty Name="nomPro" ColumnName="nomPro" />
+            <ScalarProperty Name="feciniplaPro" ColumnName="feciniplaPro" />
+            <ScalarProperty Name="fecfinplaPro" ColumnName="fecfinplaPro" />
+            <ScalarProperty Name="fecinireaPro" ColumnName="fecinireaPro" />
+            <ScalarProperty Name="fecfinreaPro" ColumnName="fecfinreaPro" />
+            <ScalarProperty Name="priPro" ColumnName="priPro" />
+            <ScalarProperty Name="razsocfacPro" ColumnName="razsocfacPro" />
+            <ScalarProperty Name="conpagPro" ColumnName="conpagPro" />
+            <ScalarProperty Name="monfacPro" ColumnName="monfacPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Recurso"><EntityTypeMapping TypeName="GyMModel.T_Recurso"><MappingFragment StoreEntitySet="T_Recurso">
+            <ScalarProperty Name="desRec" ColumnName="desRec" />
+            <ScalarProperty Name="preRec" ColumnName="preRec" />
+            <ScalarProperty Name="codRec" ColumnName="codRec" />
+            <ScalarProperty Name="codTipRec" ColumnName="codTipRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Requerimiento"><EntityTypeMapping TypeName="GyMModel.T_Requerimiento"><MappingFragment StoreEntitySet="T_Requerimiento">
+            <ScalarProperty Name="desReq" ColumnName="desReq" />
+            <ScalarProperty Name="fecReq" ColumnName="fecReq" />
+            <ScalarProperty Name="priReq" ColumnName="priReq" />
+            <ScalarProperty Name="codReq" ColumnName="codReq" />
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+            <ScalarProperty Name="codTipRec" ColumnName="codTipRec" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_TipoCambio"><EntityTypeMapping TypeName="GyMModel.T_TipoCambio"><MappingFragment StoreEntitySet="T_TipoCambio">
+            <ScalarProperty Name="fecTipCam" ColumnName="fecTipCam" />
+            <ScalarProperty Name="valcomTipCam" ColumnName="valcomTipCam" />
+            <ScalarProperty Name="valvenTipCam" ColumnName="valvenTipCam" />
+            <ScalarProperty Name="T_TipoCambio_ID" ColumnName="T_TipoCambio_ID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_TipoDocumentoIdentidad"><EntityTypeMapping TypeName="GyMModel.T_TipoDocumentoIdentidad"><MappingFragment StoreEntitySet="T_TipoDocumentoIdentidad">
+            <ScalarProperty Name="nomTipDocIde" ColumnName="nomTipDocIde" />
+            <ScalarProperty Name="desTipDocIde" ColumnName="desTipDocIde" />
+            <ScalarProperty Name="codTipDocIde" ColumnName="codTipDocIde" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_TipoMoneda"><EntityTypeMapping TypeName="GyMModel.T_TipoMoneda"><MappingFragment StoreEntitySet="T_TipoMoneda">
+            <ScalarProperty Name="monTipMon" ColumnName="monTipMon" />
+            <ScalarProperty Name="desTipMon" ColumnName="desTipMon" />
+            <ScalarProperty Name="codTipMon" ColumnName="codTipMon" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_TipoProyecto"><EntityTypeMapping TypeName="GyMModel.T_TipoProyecto"><MappingFragment StoreEntitySet="T_TipoProyecto">
+            <ScalarProperty Name="nomTipPro" ColumnName="nomTipPro" />
+            <ScalarProperty Name="desTipPro" ColumnName="desTipPro" />
+            <ScalarProperty Name="codTipPro" ColumnName="codTipPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_TipoRecurso"><EntityTypeMapping TypeName="GyMModel.T_TipoRecurso"><MappingFragment StoreEntitySet="T_TipoRecurso">
+            <ScalarProperty Name="nomTipRec" ColumnName="nomTipRec" />
+            <ScalarProperty Name="desTipRec" ColumnName="desTipRec" />
+            <ScalarProperty Name="codTipRec" ColumnName="codTipRec" />
+            <ScalarProperty Name="codPro" ColumnName="codPro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_Ubigeo"><EntityTypeMapping TypeName="GyMModel.T_Ubigeo"><MappingFragment StoreEntitySet="T_Ubigeo">
+            <ScalarProperty Name="nomUbi" ColumnName="nomUbi" />
+            <ScalarProperty Name="codposUbi" ColumnName="codposUbi" />
+            <ScalarProperty Name="codUbiProv" ColumnName="codUbiProv" />
+            <ScalarProperty Name="codUbiDist" ColumnName="codUbiDist" />
+            <ScalarProperty Name="codUbiDep" ColumnName="codUbiDep" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="T_VariablesPresupuesto"><EntityTypeMapping TypeName="GyMModel.T_VariablesPresupuesto"><MappingFragment StoreEntitySet="T_VariablesPresupuesto">
+            <ScalarProperty Name="desVarPre" ColumnName="desVarPre" />
+            <ScalarProperty Name="codVarPre" ColumnName="codVarPre" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="GyMModel.T_Actividad" Width="1.5" PointX="0.75" PointY="6.25" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Articulo" Width="1.5" PointX="12.75" PointY="11" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Cargo" Width="1.5" PointX="0.75" PointY="29.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_DetallePresupuesto" Width="1.5" PointX="8.25" PointY="1.375" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_DetalleRequerimiento" Width="1.5" PointX="15.75" PointY="15.25" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Empleado" Width="1.5" PointX="3" PointY="11.5" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Entregable" Width="1.5" PointX="1.5" PointY="2.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Equipo" Width="1.5" PointX="12.75" PointY="13.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_FlujoCaja" Width="1.5" PointX="1.5" PointY="21.625" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Material" Width="1.5" PointX="12.75" PointY="16.5" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_PlanEmpleadosActividad" Width="1.5" PointX="8.25" PointY="11.625" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_PlanProyecto" Width="1.5" PointX="1.5" PointY="17.375" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_PlanRecursosActividad" Width="1.5" PointX="15.75" PointY="11.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_PlanSubcontratasActividad" Width="1.5" PointX="8.25" PointY="8.5" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Presupuesto" Width="1.5" PointX="6" PointY="1" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Proveedor" Width="1.5" PointX="6" PointY="11.875" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Proyecto" Width="1.5" PointX="2.75" PointY="5.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Recurso" Width="1.5" PointX="10.5" PointY="13.375" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Requerimiento" Width="1.5" PointX="10.5" PointY="19.375" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_TipoCambio" Width="1.5" PointX="1.5" PointY="26.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_TipoDocumentoIdentidad" Width="1.5" PointX="0.75" PointY="12.625" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_TipoMoneda" Width="1.5" PointX="3.75" PointY="1.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_TipoProyecto" Width="1.5" PointX="8.75" PointY="4.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_TipoRecurso" Width="1.5" PointX="8.25" PointY="15.125" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_Ubigeo" Width="1.5" PointX="4.75" PointY="8.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="GyMModel.T_VariablesPresupuesto" Width="1.5" PointX="6" PointY="5.875" Height="1.595683593749996" IsExpanded="true" />
+        <AssociationConnector Association="GyMModel.FK_T_Actividad55" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.875" PointY="4.922587890625" />
+          <ConnectorPoint PointX="1.875" PointY="6.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Actividad65" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5011528461538464" PointY="17.375" />
+          <ConnectorPoint PointX="1.1261528461538468" PointY="17" />
+          <ConnectorPoint PointX="0.375" PointY="17" />
+          <ConnectorPoint PointX="0.375" PointY="10.529453627403846" />
+          <ConnectorPoint PointX="0.75115284615384637" PointY="10.15330078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Empleado57" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.4537972005208335" />
+          <ConnectorPoint PointX="2.2604166666666665" PointY="9.4537972005208317" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="9.4537972005208335" />
+          <ConnectorPoint PointX="4.40625" PointY="9.4537972005208335" />
+          <ConnectorPoint PointX="4.40625" PointY="11.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanEmpleadosActividad59" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.8206466002604174" />
+          <ConnectorPoint PointX="2.2604166666666665" PointY="7.8206466002604165" />
+          <ConnectorPoint PointX="2.4270833333333335" PointY="7.8206466002604174" />
+          <ConnectorPoint PointX="2.5" PointY="7.8206466002604174" />
+          <ConnectorPoint PointX="2.5" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="6.822916666666667" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="6.989583333333333" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="9" PointY="10.922587890624996" />
+          <ConnectorPoint PointX="9" PointY="11.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanRecursosActividad96" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.6372219003906245" />
+          <ConnectorPoint PointX="2.2604166666666665" PointY="8.6372219003906228" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="8.6372219003906245" />
+          <ConnectorPoint PointX="2.625" PointY="8.6372219003906245" />
+          <ConnectorPoint PointX="2.625" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="6.822916666666667" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="6.989583333333333" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="12.5" PointY="11.047587890624996" />
+          <ConnectorPoint PointX="12.5" PointY="10.75" />
+          <ConnectorPoint PointX="16.5" PointY="10.75" />
+          <ConnectorPoint PointX="16.5" PointY="11.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanSubcontratasActivi78" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.090992088942308" />
+          <ConnectorPoint PointX="2.2848244349011213" PointY="10.125816523843428" />
+          <ConnectorPoint PointX="2.4026755650988791" PointY="10.243667654041186" />
+          <ConnectorPoint PointX="2.4410744349011213" PointY="10.282066523843428" />
+          <ConnectorPoint PointX="2.5589255650988791" PointY="10.399917654041186" />
+          <ConnectorPoint PointX="2.5660744349011213" PointY="10.407066523843428" />
+          <ConnectorPoint PointX="2.6839255650988791" PointY="10.524917654041186" />
+          <ConnectorPoint PointX="2.9375" PointY="10.778492088942308" />
+          <ConnectorPoint PointX="2.9375" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="6.822916666666667" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="6.989583333333333" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="7.9375" PointY="10.985087890624996" />
+          <ConnectorPoint PointX="8.25" PointY="10.672587890624996" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Articulo98" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="13.375" />
+          <ConnectorPoint PointX="11.25" PointY="11.821635742187498" />
+          <ConnectorPoint PointX="12.75" PointY="11.821635742187498" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetalleRequerimiento64" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="30.490143229166666" />
+          <ConnectorPoint PointX="16.5" PointY="30.490143229166666" />
+          <ConnectorPoint PointX="16.5" PointY="18.191793619791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Empleado63" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="29.96381911458333" />
+          <ConnectorPoint PointX="3.78125" PointY="29.96381911458333" />
+          <ConnectorPoint PointX="3.78125" PointY="15.595602213541667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetallePresupuesto91" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="2.6535953776041667" />
+          <ConnectorPoint PointX="8.25" PointY="2.6535953776041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetallePresupuesto92" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="6.9394335937500031" />
+          <ConnectorPoint PointX="8.46875" PointY="6.9394335937500031" />
+          <ConnectorPoint PointX="8.46875" PointY="3.9321907552083335" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetalleRequerimiento60" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.3593735000000002" PointY="15.595602213541667" />
+          <ConnectorPoint PointX="3.3593735000000002" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="3.6979166666666665" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="3.8645833333333335" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="12.5" PointY="18.12449218750001" />
+          <ConnectorPoint PointX="12.5" PointY="16.25" />
+          <ConnectorPoint PointX="15.375" PointY="16.25" />
+          <ConnectorPoint PointX="15.375" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="15.75" PointY="16.720896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetalleRequerimiento66" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="20.653595377604169" />
+          <ConnectorPoint PointX="16.0937475" PointY="20.653595377604169" />
+          <ConnectorPoint PointX="16.0937475" PointY="18.191793619791667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_DetalleRequerimiento94" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="15.963694661458334" />
+          <ConnectorPoint PointX="15.75" PointY="15.963694661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Empleado81" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.615143229166669" />
+          <ConnectorPoint PointX="2.2604166666666665" PointY="13.615143229166669" />
+          <ConnectorPoint PointX="2.4270833333333335" PointY="13.615143229166669" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="13.615143229166669" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="13.615143229166669" />
+          <ConnectorPoint PointX="3" PointY="13.615143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanEmpleadosActividad58" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.71875" />
+          <ConnectorPoint PointX="6.822916666666667" PointY="11.71875" />
+          <ConnectorPoint PointX="6.989583333333333" PointY="11.71875" />
+          <ConnectorPoint PointX="8.25" PointY="11.71875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanProyecto54" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.34375" PointY="4.922587890625" />
+          <ConnectorPoint PointX="2.34375" PointY="17.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Equipo97" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="14.557444661458334" />
+          <ConnectorPoint PointX="12.75" PointY="14.557444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_FlujoCaja90" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="26.75" />
+          <ConnectorPoint PointX="2.25" PointY="25.720602213541667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanProyecto87" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="21.625" />
+          <ConnectorPoint PointX="2.25" PointY="19.932190755208332" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Material99" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="16.316793619791667" />
+          <ConnectorPoint PointX="11.25" PointY="17.312246093750005" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="17.312246093750005" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="17.312246093750005" />
+          <ConnectorPoint PointX="12.75" PointY="17.312246093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanRecursosActividad95" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.6562525" PointY="13.375" />
+          <ConnectorPoint PointX="11.6562525" PointY="12.985339296875006" />
+          <ConnectorPoint PointX="15.75" PointY="12.985339296875006" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_PlanSubcontratasActivi77" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.90625" PointY="11.875" />
+          <ConnectorPoint PointX="6.90625" PointY="8.59375" />
+          <ConnectorPoint PointX="8.25" PointY="8.59375" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Presupuesto93" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="2.6439925130208337" />
+          <ConnectorPoint PointX="6" PointY="2.6439925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Proveedor80" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.088819614583333" />
+          <ConnectorPoint PointX="2.2604166666666665" PointY="13.088819614583333" />
+          <ConnectorPoint PointX="2.4270833333333335" PointY="13.088819614583333" />
+          <ConnectorPoint PointX="2.75" PointY="13.088819614583333" />
+          <ConnectorPoint PointX="2.75" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="3.2760401666666668" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="3.4427068333333337" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="3.6979166666666665" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="3.8645833333333335" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="6.2604141666666671" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="6.4270808333333331" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="6.75" PointY="15.845602213541667" />
+          <ConnectorPoint PointX="6.75" PointY="15.201396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Proveedor83" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="16.860047200520839" />
+          <ConnectorPoint PointX="7.4427120833333325" PointY="16.860047200520839" />
+          <ConnectorPoint PointX="7.2760454166666664" PointY="16.860047200520839" />
+          <ConnectorPoint PointX="7.1562525" PointY="16.860047200520839" />
+          <ConnectorPoint PointX="7.1562525" PointY="15.201396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Proveedor84" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="7.4427120833333325" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="7.2760454166666664" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="7.2395858333333329" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="7.0729191666666669" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="6.3437475" PointY="16.321572207031259" />
+          <ConnectorPoint PointX="6.3437475" PointY="15.201396484374996" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_TipoRecurso79" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.3593787499999994" PointY="15.201396484374996" />
+          <ConnectorPoint PointX="7.3593787499999994" PointY="17.398522194010418" />
+          <ConnectorPoint PointX="8.25" PointY="17.398522194010418" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Recurso85" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.720896809895834" />
+          <ConnectorPoint PointX="10.5" PointY="15.720896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GyMModel.FK_T_Requerimiento82" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="17.87449218750001" />
+          <ConnectorPoint PointX="9" PointY="20.653595377604169" />
+          <ConnectorPoint PointX="10.5" PointY="20.653595377604169" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

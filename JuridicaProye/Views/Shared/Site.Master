@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="/Content/sliderman.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/style.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 9]>
+          <link rel="stylesheet" href="/Content/style_ie.css" type="text/css" />
+    <![endif]-->
+    <link href="/Content/webticker.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.webticker.js" type="text/javascript"></script>
+    <script src="/Scripts/active.marker.js" type="text/javascript"></script>
+    <script src="/Scripts/show.me.js" type="text/javascript"></script>
+    <script src="/Scripts/jscript.js" type="text/javascript"></script>
+    <script src="/Scripts/sliderman.1.3.7.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server" />
+        
+</head>
+<body>
+    <div id="contenedor-top">
+        <div id="menu-top">
+            <a href="/">
+                <img alt="" src="/Images/logo_GYM.png" />
+            </a>
+            <ul id="jsddm" class="navigation_menu">
+                <li>
+                    <%= Html.ActionLink("Gestión", "Gestion", "GestionProy")%></li>
+                <li>
+                    <%= Html.ActionLink("Planificación", "ListadoProyPlan", "Planificacion")%></li>
+                <li>
+                    <%--<%= Html.ActionLink("Compras", "Compras", "Compras")%>--%>
+                    <p>
+                        Compras</p>
+                </li>
+                <li>
+                    <%--<%= Html.ActionLink("Finanzas", "Finanzas", "Finanzas")%>--%>
+                    <p>
+                        Finanzas</p>
+                </li>
+                <li>
+                    <%= Html.ActionLink("Consultar requerimientos", "listarRequerimientos", "Legal")%></li>
+                <li>
+                    <%= Html.ActionLink("Área Legal", "Registrar", "Legal")%></li>
+                <li>
+                    <%--<%= Html.ActionLink("Recursos","/","Convocatoria")%>--%>
+                    <a href="#">Recursos Humanos</a>
+                    <ul>
+                        <li>
+                        <%= Html.ActionLink("Postular", "RegistrarPostulante", "Persona")%>
+                        </li>    
+                    </ul>
+                </li>
+                <li>
+                    <%= Html.ActionLink("Contenidos", "Contenidos", "Contenidos")%></li>
+                <li>
+                    <%= Html.ActionLink("Seguridad", "Register", "Account")%></li>
+            </ul>
+            <div id="content_search">
+                <% Html.RenderPartial("LogOnUserControl"); %>
+            </div>
+        </div>
+    </div>
+    <div id="ticker">
+        <div id="contenido-ticker">
+            <ul id="webticker">
+                <li><span>Grupo Graña y Montero cumple 80 años<a href="/"> 1</a></span></li>
+                <li><span>Certificación ISO<a href="/">1</a></span></li>
+                <li><span>IGLC Lima 2011<a href="/">1</a> </span></li>
+                <li><span>Gran Teatro Nacional<a href="/">1</a></span></li>
+                <li><span>Proyecto Punta de Lobos<a href="/">1 </a></span></li>
+                <li><span>Tren Eléctrico<a href="/">1</a></span></li>
+                <li><span>Tajo Norte Brocal<a href="/">1</a></span></li>
+                <li><span>Central Hidroeléctrica Machu Picchu<a href="/">1</a></span></li>
+                <li><span>Concentradora Bayóvar<a href="/">1</a></span></li>
+                <li><span>CADE 2008<a href="/">1</a></span></li>
+                <li><span>Premio Perú 2021<a href="/">1</a></span></li>
+                <li><span>Westin Lima Hotel & Convention Center<a href="/">1</a></span></li>
+            </ul>
+        </div>
+    </div>
+    <div id="contenedor-middle">
+    </div>
+    <div id="contenido_home">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

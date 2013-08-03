@@ -1,0 +1,1644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GRH_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="GRH_ModelStoreContainer">
+          <EntitySet Name="GRH_Area" EntityType="GRH_Model.Store.GRH_Area" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Cargo" EntityType="GRH_Model.Store.GRH_Cargo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_ContratoPersonal" EntityType="GRH_Model.Store.GRH_ContratoPersonal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Correo" EntityType="GRH_Model.Store.GRH_Correo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_DerechoHabiente" EntityType="GRH_Model.Store.GRH_DerechoHabiente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Documento" EntityType="GRH_Model.Store.GRH_Documento" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Empleado" EntityType="GRH_Model.Store.GRH_Empleado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Especialidad" EntityType="GRH_Model.Store.GRH_Especialidad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_EstadoCivil" EntityType="GRH_Model.Store.GRH_EstadoCivil" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_EstudioRealizado" EntityType="GRH_Model.Store.GRH_EstudioRealizado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_ExperienciaLaboral" EntityType="GRH_Model.Store.GRH_ExperienciaLaboral" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Idioma" EntityType="GRH_Model.Store.GRH_Idioma" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_IdiomaPersona" EntityType="GRH_Model.Store.GRH_IdiomaPersona" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_NivelEducativo" EntityType="GRH_Model.Store.GRH_NivelEducativo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_NivelIdioma" EntityType="GRH_Model.Store.GRH_NivelIdioma" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Pais" EntityType="GRH_Model.Store.GRH_Pais" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Persona" EntityType="GRH_Model.Store.GRH_Persona" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Postulante" EntityType="GRH_Model.Store.GRH_Postulante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_SituacionEstudio" EntityType="GRH_Model.Store.GRH_SituacionEstudio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_Telefono" EntityType="GRH_Model.Store.GRH_Telefono" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_TipoDerechoHabiente" EntityType="GRH_Model.Store.GRH_TipoDerechoHabiente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRH_TipoDocumento" EntityType="GRH_Model.Store.GRH_TipoDocumento" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__GRH_Contr__idEmp__3C5FD9F8" Association="GRH_Model.Store.FK__GRH_Contr__idEmp__3C5FD9F8">
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+            <End Role="GRH_ContratoPersonal" EntitySet="GRH_ContratoPersonal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Corre__idPer__3D53FE31" Association="GRH_Model.Store.FK__GRH_Corre__idPer__3D53FE31">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Correo" EntitySet="GRH_Correo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idEmp__3F3C46A3" Association="GRH_Model.Store.FK__GRH_Derec__idEmp__3F3C46A3">
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idPer__40306ADC" Association="GRH_Model.Store.FK__GRH_Derec__idPer__40306ADC">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idTip__3E48226A" Association="GRH_Model.Store.FK__GRH_Derec__idTip__3E48226A">
+            <End Role="GRH_TipoDerechoHabiente" EntitySet="GRH_TipoDerechoHabiente" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Docum__idPer__4218B34E" Association="GRH_Model.Store.FK__GRH_Docum__idPer__4218B34E">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Documento" EntitySet="GRH_Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Docum__idTip__41248F15" Association="GRH_Model.Store.FK__GRH_Docum__idTip__41248F15">
+            <End Role="GRH_TipoDocumento" EntitySet="GRH_TipoDocumento" />
+            <End Role="GRH_Documento" EntitySet="GRH_Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Emple__idAre__430CD787" Association="GRH_Model.Store.FK__GRH_Emple__idAre__430CD787">
+            <End Role="GRH_Area" EntitySet="GRH_Area" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Emple__idCar__4400FBC0" Association="GRH_Model.Store.FK__GRH_Emple__idCar__4400FBC0">
+            <End Role="GRH_Cargo" EntitySet="GRH_Cargo" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Emple__idPer__44F51FF9" Association="GRH_Model.Store.FK__GRH_Emple__idPer__44F51FF9">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idEsp__47D18CA4" Association="GRH_Model.Store.FK__GRH_Estud__idEsp__47D18CA4">
+            <End Role="GRH_Especialidad" EntitySet="GRH_Especialidad" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idNiv__46DD686B" Association="GRH_Model.Store.FK__GRH_Estud__idNiv__46DD686B">
+            <End Role="GRH_NivelEducativo" EntitySet="GRH_NivelEducativo" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idPer__48C5B0DD" Association="GRH_Model.Store.FK__GRH_Estud__idPer__48C5B0DD">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idSit__45E94432" Association="GRH_Model.Store.FK__GRH_Estud__idSit__45E94432">
+            <End Role="GRH_SituacionEstudio" EntitySet="GRH_SituacionEstudio" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Exper__idPer__49B9D516" Association="GRH_Model.Store.FK__GRH_Exper__idPer__49B9D516">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_ExperienciaLaboral" EntitySet="GRH_ExperienciaLaboral" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idIdi__4BA21D88" Association="GRH_Model.Store.FK__GRH_Idiom__idIdi__4BA21D88">
+            <End Role="GRH_Idioma" EntitySet="GRH_Idioma" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idNiv__4AADF94F" Association="GRH_Model.Store.FK__GRH_Idiom__idNiv__4AADF94F">
+            <End Role="GRH_NivelIdioma" EntitySet="GRH_NivelIdioma" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idPer__4C9641C1" Association="GRH_Model.Store.FK__GRH_Idiom__idPer__4C9641C1">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idEst__4D8A65FA" Association="GRH_Model.Store.FK__GRH_Perso__idEst__4D8A65FA">
+            <End Role="GRH_EstadoCivil" EntitySet="GRH_EstadoCivil" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idPai__4E7E8A33" Association="GRH_Model.Store.FK__GRH_Perso__idPai__4E7E8A33">
+            <End Role="GRH_Pais" EntitySet="GRH_Pais" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idPai__4F72AE6C" Association="GRH_Model.Store.FK__GRH_Perso__idPai__4F72AE6C">
+            <End Role="GRH_Pais" EntitySet="GRH_Pais" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Postu__idPer__5066D2A5" Association="GRH_Model.Store.FK__GRH_Postu__idPer__5066D2A5">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Postulante" EntitySet="GRH_Postulante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Telef__idPer__515AF6DE" Association="GRH_Model.Store.FK__GRH_Telef__idPer__515AF6DE">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Telefono" EntitySet="GRH_Telefono" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GRH_Area">
+          <Key>
+            <PropertyRef Name="idArea" />
+          </Key>
+          <Property Name="idArea" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_Cargo">
+          <Key>
+            <PropertyRef Name="idCargo" />
+          </Key>
+          <Property Name="idCargo" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_ContratoPersonal">
+          <Key>
+            <PropertyRef Name="idContratoPersonal" />
+          </Key>
+          <Property Name="idContratoPersonal" Type="int" Nullable="false" />
+          <Property Name="idEmpleado" Type="int" />
+          <Property Name="nroContrato" Type="varchar" MaxLength="20" />
+          <Property Name="fechaInicio" Type="datetime" />
+          <Property Name="fechaFin" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GRH_Correo">
+          <Key>
+            <PropertyRef Name="idCorreo" />
+          </Key>
+          <Property Name="idCorreo" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="cuentaCorreo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GRH_DerechoHabiente">
+          <Key>
+            <PropertyRef Name="idDerechoHabiente" />
+          </Key>
+          <Property Name="idDerechoHabiente" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="idEmpleado" Type="int" />
+          <Property Name="idTipoDerechoHabiente" Type="int" />
+        </EntityType>
+        <EntityType Name="GRH_Documento">
+          <Key>
+            <PropertyRef Name="idDocumento" />
+          </Key>
+          <Property Name="idDocumento" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="idTipoDocumento" Type="int" />
+          <Property Name="nroDocumento" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="GRH_Empleado">
+          <Key>
+            <PropertyRef Name="idEmpleado" />
+          </Key>
+          <Property Name="idEmpleado" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="idCargo" Type="int" />
+          <Property Name="idArea" Type="int" />
+          <Property Name="fechaIngreso" Type="datetime" />
+          <Property Name="fechaCese" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GRH_Especialidad">
+          <Key>
+            <PropertyRef Name="idEspecialidad" />
+          </Key>
+          <Property Name="idEspecialidad" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_EstadoCivil">
+          <Key>
+            <PropertyRef Name="idEstadoCivil" />
+          </Key>
+          <Property Name="idEstadoCivil" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_EstudioRealizado">
+          <Key>
+            <PropertyRef Name="idEstudioRealizado" />
+          </Key>
+          <Property Name="idEstudioRealizado" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="idEspecialidad" Type="int" />
+          <Property Name="idNivelEducativo" Type="int" />
+          <Property Name="idSituacionEstudio" Type="int" />
+          <Property Name="centroEstudio" Type="varchar" MaxLength="50" />
+          <Property Name="fechaInicio" Type="datetime" />
+          <Property Name="fechaFin" Type="datetime" />
+          <Property Name="nombreEstudio" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GRH_ExperienciaLaboral">
+          <Key>
+            <PropertyRef Name="idExperienciaLaboral" />
+          </Key>
+          <Property Name="idExperienciaLaboral" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="fechaInicio" Type="datetime" />
+          <Property Name="FechaFin" Type="datetime" />
+          <Property Name="conocimientos" Type="varchar" MaxLength="400" />
+          <Property Name="cargo" Type="varchar" MaxLength="50" />
+          <Property Name="empresa" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GRH_Idioma">
+          <Key>
+            <PropertyRef Name="idIdioma" />
+          </Key>
+          <Property Name="idIdioma" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_IdiomaPersona">
+          <Key>
+            <PropertyRef Name="idPersona" />
+            <PropertyRef Name="idIdioma" />
+          </Key>
+          <Property Name="idPersona" Type="int" Nullable="false" />
+          <Property Name="idIdioma" Type="int" Nullable="false" />
+          <Property Name="idNivelIdioma" Type="int" />
+          <Property Name="nativo" Type="bit" />
+        </EntityType>
+        <EntityType Name="GRH_NivelEducativo">
+          <Key>
+            <PropertyRef Name="idNivelEducativo" />
+          </Key>
+          <Property Name="idNivelEducativo" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_NivelIdioma">
+          <Key>
+            <PropertyRef Name="idNivelIdioma" />
+          </Key>
+          <Property Name="idNivelIdioma" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_Pais">
+          <Key>
+            <PropertyRef Name="idPais" />
+          </Key>
+          <Property Name="idPais" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_Persona">
+          <Key>
+            <PropertyRef Name="idPersona" />
+          </Key>
+          <Property Name="idPersona" Type="int" Nullable="false" />
+          <Property Name="idPais_R" Type="int" />
+          <Property Name="idPais_N" Type="int" />
+          <Property Name="idEstadoCivil" Type="int" />
+          <Property Name="nombre" Type="varchar" MaxLength="30" />
+          <Property Name="apellidoPaterno" Type="varchar" MaxLength="30" />
+          <Property Name="apellidoMaterno" Type="varchar" MaxLength="30" />
+          <Property Name="direccion" Type="varchar" MaxLength="150" />
+          <Property Name="sexo" Type="bit" />
+          <Property Name="fechaNacimiento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GRH_Postulante">
+          <Key>
+            <PropertyRef Name="idPostulante" />
+          </Key>
+          <Property Name="idPostulante" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="disponibilidad" Type="bit" />
+        </EntityType>
+        <EntityType Name="GRH_SituacionEstudio">
+          <Key>
+            <PropertyRef Name="idSituacionEstudio" />
+          </Key>
+          <Property Name="idSituacionEstudio" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_Telefono">
+          <Key>
+            <PropertyRef Name="idTelefono" />
+          </Key>
+          <Property Name="idTelefono" Type="int" Nullable="false" />
+          <Property Name="idPersona" Type="int" />
+          <Property Name="nroTelefono" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_TipoDerechoHabiente">
+          <Key>
+            <PropertyRef Name="idTipoDerechoHabiente" />
+          </Key>
+          <Property Name="idTipoDerechoHabiente" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GRH_TipoDocumento">
+          <Key>
+            <PropertyRef Name="idTipoDocumento" />
+          </Key>
+          <Property Name="idTipoDocumento" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK__GRH_Contr__idEmp__3C5FD9F8">
+          <End Role="GRH_Empleado" Type="GRH_Model.Store.GRH_Empleado" Multiplicity="0..1" />
+          <End Role="GRH_ContratoPersonal" Type="GRH_Model.Store.GRH_ContratoPersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Empleado">
+              <PropertyRef Name="idEmpleado" />
+            </Principal>
+            <Dependent Role="GRH_ContratoPersonal">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Corre__idPer__3D53FE31">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Correo" Type="GRH_Model.Store.GRH_Correo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Correo">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idEmp__3F3C46A3">
+          <End Role="GRH_Empleado" Type="GRH_Model.Store.GRH_Empleado" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.Store.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Empleado">
+              <PropertyRef Name="idEmpleado" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idPer__40306ADC">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.Store.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idTip__3E48226A">
+          <End Role="GRH_TipoDerechoHabiente" Type="GRH_Model.Store.GRH_TipoDerechoHabiente" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.Store.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_TipoDerechoHabiente">
+              <PropertyRef Name="idTipoDerechoHabiente" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idTipoDerechoHabiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Docum__idPer__4218B34E">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Documento" Type="GRH_Model.Store.GRH_Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Documento">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Docum__idTip__41248F15">
+          <End Role="GRH_TipoDocumento" Type="GRH_Model.Store.GRH_TipoDocumento" Multiplicity="0..1" />
+          <End Role="GRH_Documento" Type="GRH_Model.Store.GRH_Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_TipoDocumento">
+              <PropertyRef Name="idTipoDocumento" />
+            </Principal>
+            <Dependent Role="GRH_Documento">
+              <PropertyRef Name="idTipoDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Emple__idAre__430CD787">
+          <End Role="GRH_Area" Type="GRH_Model.Store.GRH_Area" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.Store.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Area">
+              <PropertyRef Name="idArea" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Emple__idCar__4400FBC0">
+          <End Role="GRH_Cargo" Type="GRH_Model.Store.GRH_Cargo" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.Store.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Cargo">
+              <PropertyRef Name="idCargo" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Emple__idPer__44F51FF9">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.Store.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idEsp__47D18CA4">
+          <End Role="GRH_Especialidad" Type="GRH_Model.Store.GRH_Especialidad" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.Store.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Especialidad">
+              <PropertyRef Name="idEspecialidad" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idEspecialidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idNiv__46DD686B">
+          <End Role="GRH_NivelEducativo" Type="GRH_Model.Store.GRH_NivelEducativo" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.Store.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_NivelEducativo">
+              <PropertyRef Name="idNivelEducativo" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idNivelEducativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idPer__48C5B0DD">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.Store.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idSit__45E94432">
+          <End Role="GRH_SituacionEstudio" Type="GRH_Model.Store.GRH_SituacionEstudio" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.Store.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_SituacionEstudio">
+              <PropertyRef Name="idSituacionEstudio" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idSituacionEstudio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Exper__idPer__49B9D516">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_ExperienciaLaboral" Type="GRH_Model.Store.GRH_ExperienciaLaboral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_ExperienciaLaboral">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idIdi__4BA21D88">
+          <End Role="GRH_Idioma" Type="GRH_Model.Store.GRH_Idioma" Multiplicity="1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.Store.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Idioma">
+              <PropertyRef Name="idIdioma" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idIdioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idNiv__4AADF94F">
+          <End Role="GRH_NivelIdioma" Type="GRH_Model.Store.GRH_NivelIdioma" Multiplicity="0..1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.Store.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_NivelIdioma">
+              <PropertyRef Name="idNivelIdioma" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idNivelIdioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idPer__4C9641C1">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.Store.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idEst__4D8A65FA">
+          <End Role="GRH_EstadoCivil" Type="GRH_Model.Store.GRH_EstadoCivil" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_EstadoCivil">
+              <PropertyRef Name="idEstadoCivil" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idEstadoCivil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idPai__4E7E8A33">
+          <End Role="GRH_Pais" Type="GRH_Model.Store.GRH_Pais" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Pais">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idPais_N" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idPai__4F72AE6C">
+          <End Role="GRH_Pais" Type="GRH_Model.Store.GRH_Pais" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Pais">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idPais_R" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Postu__idPer__5066D2A5">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Postulante" Type="GRH_Model.Store.GRH_Postulante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Postulante">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Telef__idPer__515AF6DE">
+          <End Role="GRH_Persona" Type="GRH_Model.Store.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Telefono" Type="GRH_Model.Store.GRH_Telefono" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Telefono">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GRH_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="GRH_Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GRH_Area" EntityType="GRH_Model.GRH_Area" />
+          <EntitySet Name="GRH_Cargo" EntityType="GRH_Model.GRH_Cargo" />
+          <EntitySet Name="GRH_ContratoPersonal" EntityType="GRH_Model.GRH_ContratoPersonal" />
+          <EntitySet Name="GRH_Correo" EntityType="GRH_Model.GRH_Correo" />
+          <EntitySet Name="GRH_DerechoHabiente" EntityType="GRH_Model.GRH_DerechoHabiente" />
+          <EntitySet Name="GRH_Documento" EntityType="GRH_Model.GRH_Documento" />
+          <EntitySet Name="GRH_Empleado" EntityType="GRH_Model.GRH_Empleado" />
+          <EntitySet Name="GRH_Especialidad" EntityType="GRH_Model.GRH_Especialidad" />
+          <EntitySet Name="GRH_EstadoCivil" EntityType="GRH_Model.GRH_EstadoCivil" />
+          <EntitySet Name="GRH_EstudioRealizado" EntityType="GRH_Model.GRH_EstudioRealizado" />
+          <EntitySet Name="GRH_ExperienciaLaboral" EntityType="GRH_Model.GRH_ExperienciaLaboral" />
+          <EntitySet Name="GRH_Idioma" EntityType="GRH_Model.GRH_Idioma" />
+          <EntitySet Name="GRH_IdiomaPersona" EntityType="GRH_Model.GRH_IdiomaPersona" />
+          <EntitySet Name="GRH_NivelEducativo" EntityType="GRH_Model.GRH_NivelEducativo" />
+          <EntitySet Name="GRH_NivelIdioma" EntityType="GRH_Model.GRH_NivelIdioma" />
+          <EntitySet Name="GRH_Pais" EntityType="GRH_Model.GRH_Pais" />
+          <EntitySet Name="GRH_Persona" EntityType="GRH_Model.GRH_Persona" />
+          <EntitySet Name="GRH_Postulante" EntityType="GRH_Model.GRH_Postulante" />
+          <EntitySet Name="GRH_SituacionEstudio" EntityType="GRH_Model.GRH_SituacionEstudio" />
+          <EntitySet Name="GRH_Telefono" EntityType="GRH_Model.GRH_Telefono" />
+          <EntitySet Name="GRH_TipoDerechoHabiente" EntityType="GRH_Model.GRH_TipoDerechoHabiente" />
+          <EntitySet Name="GRH_TipoDocumento" EntityType="GRH_Model.GRH_TipoDocumento" />
+          <AssociationSet Name="FK__GRH_Emple__idAre__430CD787" Association="GRH_Model.FK__GRH_Emple__idAre__430CD787">
+            <End Role="GRH_Area" EntitySet="GRH_Area" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Emple__idCar__4400FBC0" Association="GRH_Model.FK__GRH_Emple__idCar__4400FBC0">
+            <End Role="GRH_Cargo" EntitySet="GRH_Cargo" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Contr__idEmp__3C5FD9F8" Association="GRH_Model.FK__GRH_Contr__idEmp__3C5FD9F8">
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+            <End Role="GRH_ContratoPersonal" EntitySet="GRH_ContratoPersonal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Corre__idPer__3D53FE31" Association="GRH_Model.FK__GRH_Corre__idPer__3D53FE31">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Correo" EntitySet="GRH_Correo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idEmp__3F3C46A3" Association="GRH_Model.FK__GRH_Derec__idEmp__3F3C46A3">
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idPer__40306ADC" Association="GRH_Model.FK__GRH_Derec__idPer__40306ADC">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Derec__idTip__3E48226A" Association="GRH_Model.FK__GRH_Derec__idTip__3E48226A">
+            <End Role="GRH_TipoDerechoHabiente" EntitySet="GRH_TipoDerechoHabiente" />
+            <End Role="GRH_DerechoHabiente" EntitySet="GRH_DerechoHabiente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Docum__idPer__4218B34E" Association="GRH_Model.FK__GRH_Docum__idPer__4218B34E">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Documento" EntitySet="GRH_Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Docum__idTip__41248F15" Association="GRH_Model.FK__GRH_Docum__idTip__41248F15">
+            <End Role="GRH_TipoDocumento" EntitySet="GRH_TipoDocumento" />
+            <End Role="GRH_Documento" EntitySet="GRH_Documento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Emple__idPer__44F51FF9" Association="GRH_Model.FK__GRH_Emple__idPer__44F51FF9">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Empleado" EntitySet="GRH_Empleado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idEsp__47D18CA4" Association="GRH_Model.FK__GRH_Estud__idEsp__47D18CA4">
+            <End Role="GRH_Especialidad" EntitySet="GRH_Especialidad" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idEst__4D8A65FA" Association="GRH_Model.FK__GRH_Perso__idEst__4D8A65FA">
+            <End Role="GRH_EstadoCivil" EntitySet="GRH_EstadoCivil" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idNiv__46DD686B" Association="GRH_Model.FK__GRH_Estud__idNiv__46DD686B">
+            <End Role="GRH_NivelEducativo" EntitySet="GRH_NivelEducativo" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idPer__48C5B0DD" Association="GRH_Model.FK__GRH_Estud__idPer__48C5B0DD">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Estud__idSit__45E94432" Association="GRH_Model.FK__GRH_Estud__idSit__45E94432">
+            <End Role="GRH_SituacionEstudio" EntitySet="GRH_SituacionEstudio" />
+            <End Role="GRH_EstudioRealizado" EntitySet="GRH_EstudioRealizado" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Exper__idPer__49B9D516" Association="GRH_Model.FK__GRH_Exper__idPer__49B9D516">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_ExperienciaLaboral" EntitySet="GRH_ExperienciaLaboral" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idIdi__4BA21D88" Association="GRH_Model.FK__GRH_Idiom__idIdi__4BA21D88">
+            <End Role="GRH_Idioma" EntitySet="GRH_Idioma" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idNiv__4AADF94F" Association="GRH_Model.FK__GRH_Idiom__idNiv__4AADF94F">
+            <End Role="GRH_NivelIdioma" EntitySet="GRH_NivelIdioma" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Idiom__idPer__4C9641C1" Association="GRH_Model.FK__GRH_Idiom__idPer__4C9641C1">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_IdiomaPersona" EntitySet="GRH_IdiomaPersona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idPai__4E7E8A33" Association="GRH_Model.FK__GRH_Perso__idPai__4E7E8A33">
+            <End Role="GRH_Pais" EntitySet="GRH_Pais" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Perso__idPai__4F72AE6C" Association="GRH_Model.FK__GRH_Perso__idPai__4F72AE6C">
+            <End Role="GRH_Pais" EntitySet="GRH_Pais" />
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Postu__idPer__5066D2A5" Association="GRH_Model.FK__GRH_Postu__idPer__5066D2A5">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Postulante" EntitySet="GRH_Postulante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRH_Telef__idPer__515AF6DE" Association="GRH_Model.FK__GRH_Telef__idPer__515AF6DE">
+            <End Role="GRH_Persona" EntitySet="GRH_Persona" />
+            <End Role="GRH_Telefono" EntitySet="GRH_Telefono" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GRH_Area">
+          <Key>
+            <PropertyRef Name="idArea" />
+          </Key>
+          <Property Name="idArea" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Empleado" Relationship="GRH_Model.FK__GRH_Emple__idAre__430CD787" FromRole="GRH_Area" ToRole="GRH_Empleado" />
+        </EntityType>
+        <EntityType Name="GRH_Cargo">
+          <Key>
+            <PropertyRef Name="idCargo" />
+          </Key>
+          <Property Name="idCargo" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Empleado" Relationship="GRH_Model.FK__GRH_Emple__idCar__4400FBC0" FromRole="GRH_Cargo" ToRole="GRH_Empleado" />
+        </EntityType>
+        <EntityType Name="GRH_ContratoPersonal">
+          <Key>
+            <PropertyRef Name="idContratoPersonal" />
+          </Key>
+          <Property Name="idContratoPersonal" Type="Int32" Nullable="false" />
+          <Property Name="idEmpleado" Type="Int32" />
+          <Property Name="nroContrato" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="fechaInicio" Type="DateTime" />
+          <Property Name="fechaFin" Type="DateTime" />
+          <NavigationProperty Name="GRH_Empleado" Relationship="GRH_Model.FK__GRH_Contr__idEmp__3C5FD9F8" FromRole="GRH_ContratoPersonal" ToRole="GRH_Empleado" />
+        </EntityType>
+        <EntityType Name="GRH_Correo">
+          <Key>
+            <PropertyRef Name="idCorreo" />
+          </Key>
+          <Property Name="idCorreo" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="cuentaCorreo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Corre__idPer__3D53FE31" FromRole="GRH_Correo" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_DerechoHabiente">
+          <Key>
+            <PropertyRef Name="idDerechoHabiente" />
+          </Key>
+          <Property Name="idDerechoHabiente" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="idEmpleado" Type="Int32" />
+          <Property Name="idTipoDerechoHabiente" Type="Int32" />
+          <NavigationProperty Name="GRH_Empleado" Relationship="GRH_Model.FK__GRH_Derec__idEmp__3F3C46A3" FromRole="GRH_DerechoHabiente" ToRole="GRH_Empleado" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Derec__idPer__40306ADC" FromRole="GRH_DerechoHabiente" ToRole="GRH_Persona" />
+          <NavigationProperty Name="GRH_TipoDerechoHabiente" Relationship="GRH_Model.FK__GRH_Derec__idTip__3E48226A" FromRole="GRH_DerechoHabiente" ToRole="GRH_TipoDerechoHabiente" />
+        </EntityType>
+        <EntityType Name="GRH_Documento">
+          <Key>
+            <PropertyRef Name="idDocumento" />
+          </Key>
+          <Property Name="idDocumento" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="idTipoDocumento" Type="Int32" />
+          <Property Name="nroDocumento" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Docum__idPer__4218B34E" FromRole="GRH_Documento" ToRole="GRH_Persona" />
+          <NavigationProperty Name="GRH_TipoDocumento" Relationship="GRH_Model.FK__GRH_Docum__idTip__41248F15" FromRole="GRH_Documento" ToRole="GRH_TipoDocumento" />
+        </EntityType>
+        <EntityType Name="GRH_Empleado">
+          <Key>
+            <PropertyRef Name="idEmpleado" />
+          </Key>
+          <Property Name="idEmpleado" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="idCargo" Type="Int32" />
+          <Property Name="idArea" Type="Int32" />
+          <Property Name="fechaIngreso" Type="DateTime" />
+          <Property Name="fechaCese" Type="DateTime" />
+          <NavigationProperty Name="GRH_Area" Relationship="GRH_Model.FK__GRH_Emple__idAre__430CD787" FromRole="GRH_Empleado" ToRole="GRH_Area" />
+          <NavigationProperty Name="GRH_Cargo" Relationship="GRH_Model.FK__GRH_Emple__idCar__4400FBC0" FromRole="GRH_Empleado" ToRole="GRH_Cargo" />
+          <NavigationProperty Name="GRH_ContratoPersonal" Relationship="GRH_Model.FK__GRH_Contr__idEmp__3C5FD9F8" FromRole="GRH_Empleado" ToRole="GRH_ContratoPersonal" />
+          <NavigationProperty Name="GRH_DerechoHabiente" Relationship="GRH_Model.FK__GRH_Derec__idEmp__3F3C46A3" FromRole="GRH_Empleado" ToRole="GRH_DerechoHabiente" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Emple__idPer__44F51FF9" FromRole="GRH_Empleado" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_Especialidad">
+          <Key>
+            <PropertyRef Name="idEspecialidad" />
+          </Key>
+          <Property Name="idEspecialidad" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_EstudioRealizado" Relationship="GRH_Model.FK__GRH_Estud__idEsp__47D18CA4" FromRole="GRH_Especialidad" ToRole="GRH_EstudioRealizado" />
+        </EntityType>
+        <EntityType Name="GRH_EstadoCivil">
+          <Key>
+            <PropertyRef Name="idEstadoCivil" />
+          </Key>
+          <Property Name="idEstadoCivil" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Perso__idEst__4D8A65FA" FromRole="GRH_EstadoCivil" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_EstudioRealizado">
+          <Key>
+            <PropertyRef Name="idEstudioRealizado" />
+          </Key>
+          <Property Name="idEstudioRealizado" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="idEspecialidad" Type="Int32" />
+          <Property Name="idNivelEducativo" Type="Int32" />
+          <Property Name="idSituacionEstudio" Type="Int32" />
+          <Property Name="centroEstudio" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="fechaInicio" Type="DateTime" />
+          <Property Name="fechaFin" Type="DateTime" />
+          <Property Name="nombreEstudio" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Especialidad" Relationship="GRH_Model.FK__GRH_Estud__idEsp__47D18CA4" FromRole="GRH_EstudioRealizado" ToRole="GRH_Especialidad" />
+          <NavigationProperty Name="GRH_NivelEducativo" Relationship="GRH_Model.FK__GRH_Estud__idNiv__46DD686B" FromRole="GRH_EstudioRealizado" ToRole="GRH_NivelEducativo" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Estud__idPer__48C5B0DD" FromRole="GRH_EstudioRealizado" ToRole="GRH_Persona" />
+          <NavigationProperty Name="GRH_SituacionEstudio" Relationship="GRH_Model.FK__GRH_Estud__idSit__45E94432" FromRole="GRH_EstudioRealizado" ToRole="GRH_SituacionEstudio" />
+        </EntityType>
+        <EntityType Name="GRH_ExperienciaLaboral">
+          <Key>
+            <PropertyRef Name="idExperienciaLaboral" />
+          </Key>
+          <Property Name="idExperienciaLaboral" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="fechaInicio" Type="DateTime" />
+          <Property Name="FechaFin" Type="DateTime" />
+          <Property Name="conocimientos" Type="String" MaxLength="400" Unicode="false" FixedLength="false" />
+          <Property Name="cargo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Exper__idPer__49B9D516" FromRole="GRH_ExperienciaLaboral" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_Idioma">
+          <Key>
+            <PropertyRef Name="idIdioma" />
+          </Key>
+          <Property Name="idIdioma" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_IdiomaPersona" Relationship="GRH_Model.FK__GRH_Idiom__idIdi__4BA21D88" FromRole="GRH_Idioma" ToRole="GRH_IdiomaPersona" />
+        </EntityType>
+        <EntityType Name="GRH_IdiomaPersona">
+          <Key>
+            <PropertyRef Name="idPersona" />
+            <PropertyRef Name="idIdioma" />
+          </Key>
+          <Property Name="idPersona" Type="Int32" Nullable="false" />
+          <Property Name="idIdioma" Type="Int32" Nullable="false" />
+          <Property Name="idNivelIdioma" Type="Int32" />
+          <Property Name="nativo" Type="Boolean" />
+          <NavigationProperty Name="GRH_Idioma" Relationship="GRH_Model.FK__GRH_Idiom__idIdi__4BA21D88" FromRole="GRH_IdiomaPersona" ToRole="GRH_Idioma" />
+          <NavigationProperty Name="GRH_NivelIdioma" Relationship="GRH_Model.FK__GRH_Idiom__idNiv__4AADF94F" FromRole="GRH_IdiomaPersona" ToRole="GRH_NivelIdioma" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Idiom__idPer__4C9641C1" FromRole="GRH_IdiomaPersona" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_NivelEducativo">
+          <Key>
+            <PropertyRef Name="idNivelEducativo" />
+          </Key>
+          <Property Name="idNivelEducativo" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_EstudioRealizado" Relationship="GRH_Model.FK__GRH_Estud__idNiv__46DD686B" FromRole="GRH_NivelEducativo" ToRole="GRH_EstudioRealizado" />
+        </EntityType>
+        <EntityType Name="GRH_NivelIdioma">
+          <Key>
+            <PropertyRef Name="idNivelIdioma" />
+          </Key>
+          <Property Name="idNivelIdioma" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_IdiomaPersona" Relationship="GRH_Model.FK__GRH_Idiom__idNiv__4AADF94F" FromRole="GRH_NivelIdioma" ToRole="GRH_IdiomaPersona" />
+        </EntityType>
+        <EntityType Name="GRH_Pais">
+          <Key>
+            <PropertyRef Name="idPais" />
+          </Key>
+          <Property Name="idPais" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Perso__idPai__4E7E8A33" FromRole="GRH_Pais" ToRole="GRH_Persona" />
+          <NavigationProperty Name="GRH_Persona1" Relationship="GRH_Model.FK__GRH_Perso__idPai__4F72AE6C" FromRole="GRH_Pais" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_Persona">
+          <Key>
+            <PropertyRef Name="idPersona" />
+          </Key>
+          <Property Name="idPersona" Type="Int32" Nullable="false" />
+          <Property Name="idPais_R" Type="Int32" />
+          <Property Name="idPais_N" Type="Int32" />
+          <Property Name="idEstadoCivil" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoPaterno" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="apellidoMaterno" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="direccion" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="sexo" Type="Boolean" />
+          <Property Name="fechaNacimiento" Type="DateTime" />
+          <NavigationProperty Name="GRH_Correo" Relationship="GRH_Model.FK__GRH_Corre__idPer__3D53FE31" FromRole="GRH_Persona" ToRole="GRH_Correo" />
+          <NavigationProperty Name="GRH_DerechoHabiente" Relationship="GRH_Model.FK__GRH_Derec__idPer__40306ADC" FromRole="GRH_Persona" ToRole="GRH_DerechoHabiente" />
+          <NavigationProperty Name="GRH_Documento" Relationship="GRH_Model.FK__GRH_Docum__idPer__4218B34E" FromRole="GRH_Persona" ToRole="GRH_Documento" />
+          <NavigationProperty Name="GRH_Empleado" Relationship="GRH_Model.FK__GRH_Emple__idPer__44F51FF9" FromRole="GRH_Persona" ToRole="GRH_Empleado" />
+          <NavigationProperty Name="GRH_EstadoCivil" Relationship="GRH_Model.FK__GRH_Perso__idEst__4D8A65FA" FromRole="GRH_Persona" ToRole="GRH_EstadoCivil" />
+          <NavigationProperty Name="GRH_EstudioRealizado" Relationship="GRH_Model.FK__GRH_Estud__idPer__48C5B0DD" FromRole="GRH_Persona" ToRole="GRH_EstudioRealizado" />
+          <NavigationProperty Name="GRH_ExperienciaLaboral" Relationship="GRH_Model.FK__GRH_Exper__idPer__49B9D516" FromRole="GRH_Persona" ToRole="GRH_ExperienciaLaboral" />
+          <NavigationProperty Name="GRH_IdiomaPersona" Relationship="GRH_Model.FK__GRH_Idiom__idPer__4C9641C1" FromRole="GRH_Persona" ToRole="GRH_IdiomaPersona" />
+          <NavigationProperty Name="GRH_Pais" Relationship="GRH_Model.FK__GRH_Perso__idPai__4E7E8A33" FromRole="GRH_Persona" ToRole="GRH_Pais" />
+          <NavigationProperty Name="GRH_Pais1" Relationship="GRH_Model.FK__GRH_Perso__idPai__4F72AE6C" FromRole="GRH_Persona" ToRole="GRH_Pais" />
+          <NavigationProperty Name="GRH_Postulante" Relationship="GRH_Model.FK__GRH_Postu__idPer__5066D2A5" FromRole="GRH_Persona" ToRole="GRH_Postulante" />
+          <NavigationProperty Name="GRH_Telefono" Relationship="GRH_Model.FK__GRH_Telef__idPer__515AF6DE" FromRole="GRH_Persona" ToRole="GRH_Telefono" />
+        </EntityType>
+        <EntityType Name="GRH_Postulante">
+          <Key>
+            <PropertyRef Name="idPostulante" />
+          </Key>
+          <Property Name="idPostulante" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="disponibilidad" Type="Boolean" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Postu__idPer__5066D2A5" FromRole="GRH_Postulante" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_SituacionEstudio">
+          <Key>
+            <PropertyRef Name="idSituacionEstudio" />
+          </Key>
+          <Property Name="idSituacionEstudio" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_EstudioRealizado" Relationship="GRH_Model.FK__GRH_Estud__idSit__45E94432" FromRole="GRH_SituacionEstudio" ToRole="GRH_EstudioRealizado" />
+        </EntityType>
+        <EntityType Name="GRH_Telefono">
+          <Key>
+            <PropertyRef Name="idTelefono" />
+          </Key>
+          <Property Name="idTelefono" Type="Int32" Nullable="false" />
+          <Property Name="idPersona" Type="Int32" />
+          <Property Name="nroTelefono" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Persona" Relationship="GRH_Model.FK__GRH_Telef__idPer__515AF6DE" FromRole="GRH_Telefono" ToRole="GRH_Persona" />
+        </EntityType>
+        <EntityType Name="GRH_TipoDerechoHabiente">
+          <Key>
+            <PropertyRef Name="idTipoDerechoHabiente" />
+          </Key>
+          <Property Name="idTipoDerechoHabiente" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_DerechoHabiente" Relationship="GRH_Model.FK__GRH_Derec__idTip__3E48226A" FromRole="GRH_TipoDerechoHabiente" ToRole="GRH_DerechoHabiente" />
+        </EntityType>
+        <EntityType Name="GRH_TipoDocumento">
+          <Key>
+            <PropertyRef Name="idTipoDocumento" />
+          </Key>
+          <Property Name="idTipoDocumento" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRH_Documento" Relationship="GRH_Model.FK__GRH_Docum__idTip__41248F15" FromRole="GRH_TipoDocumento" ToRole="GRH_Documento" />
+        </EntityType>
+        <Association Name="FK__GRH_Emple__idAre__430CD787">
+          <End Role="GRH_Area" Type="GRH_Model.GRH_Area" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Area">
+              <PropertyRef Name="idArea" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Emple__idCar__4400FBC0">
+          <End Role="GRH_Cargo" Type="GRH_Model.GRH_Cargo" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Cargo">
+              <PropertyRef Name="idCargo" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Contr__idEmp__3C5FD9F8">
+          <End Role="GRH_Empleado" Type="GRH_Model.GRH_Empleado" Multiplicity="0..1" />
+          <End Role="GRH_ContratoPersonal" Type="GRH_Model.GRH_ContratoPersonal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Empleado">
+              <PropertyRef Name="idEmpleado" />
+            </Principal>
+            <Dependent Role="GRH_ContratoPersonal">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Corre__idPer__3D53FE31">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Correo" Type="GRH_Model.GRH_Correo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Correo">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idEmp__3F3C46A3">
+          <End Role="GRH_Empleado" Type="GRH_Model.GRH_Empleado" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Empleado">
+              <PropertyRef Name="idEmpleado" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idEmpleado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idPer__40306ADC">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Derec__idTip__3E48226A">
+          <End Role="GRH_TipoDerechoHabiente" Type="GRH_Model.GRH_TipoDerechoHabiente" Multiplicity="0..1" />
+          <End Role="GRH_DerechoHabiente" Type="GRH_Model.GRH_DerechoHabiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_TipoDerechoHabiente">
+              <PropertyRef Name="idTipoDerechoHabiente" />
+            </Principal>
+            <Dependent Role="GRH_DerechoHabiente">
+              <PropertyRef Name="idTipoDerechoHabiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Docum__idPer__4218B34E">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Documento" Type="GRH_Model.GRH_Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Documento">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Docum__idTip__41248F15">
+          <End Role="GRH_TipoDocumento" Type="GRH_Model.GRH_TipoDocumento" Multiplicity="0..1" />
+          <End Role="GRH_Documento" Type="GRH_Model.GRH_Documento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_TipoDocumento">
+              <PropertyRef Name="idTipoDocumento" />
+            </Principal>
+            <Dependent Role="GRH_Documento">
+              <PropertyRef Name="idTipoDocumento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Emple__idPer__44F51FF9">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Empleado" Type="GRH_Model.GRH_Empleado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Empleado">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idEsp__47D18CA4">
+          <End Role="GRH_Especialidad" Type="GRH_Model.GRH_Especialidad" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Especialidad">
+              <PropertyRef Name="idEspecialidad" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idEspecialidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idEst__4D8A65FA">
+          <End Role="GRH_EstadoCivil" Type="GRH_Model.GRH_EstadoCivil" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_EstadoCivil">
+              <PropertyRef Name="idEstadoCivil" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idEstadoCivil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idNiv__46DD686B">
+          <End Role="GRH_NivelEducativo" Type="GRH_Model.GRH_NivelEducativo" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_NivelEducativo">
+              <PropertyRef Name="idNivelEducativo" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idNivelEducativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idPer__48C5B0DD">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Estud__idSit__45E94432">
+          <End Role="GRH_SituacionEstudio" Type="GRH_Model.GRH_SituacionEstudio" Multiplicity="0..1" />
+          <End Role="GRH_EstudioRealizado" Type="GRH_Model.GRH_EstudioRealizado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_SituacionEstudio">
+              <PropertyRef Name="idSituacionEstudio" />
+            </Principal>
+            <Dependent Role="GRH_EstudioRealizado">
+              <PropertyRef Name="idSituacionEstudio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Exper__idPer__49B9D516">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_ExperienciaLaboral" Type="GRH_Model.GRH_ExperienciaLaboral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_ExperienciaLaboral">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idIdi__4BA21D88">
+          <End Role="GRH_Idioma" Type="GRH_Model.GRH_Idioma" Multiplicity="1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Idioma">
+              <PropertyRef Name="idIdioma" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idIdioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idNiv__4AADF94F">
+          <End Role="GRH_NivelIdioma" Type="GRH_Model.GRH_NivelIdioma" Multiplicity="0..1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_NivelIdioma">
+              <PropertyRef Name="idNivelIdioma" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idNivelIdioma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Idiom__idPer__4C9641C1">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="1" />
+          <End Role="GRH_IdiomaPersona" Type="GRH_Model.GRH_IdiomaPersona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_IdiomaPersona">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idPai__4E7E8A33">
+          <End Role="GRH_Pais" Type="GRH_Model.GRH_Pais" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Pais">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idPais_N" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Perso__idPai__4F72AE6C">
+          <End Role="GRH_Pais" Type="GRH_Model.GRH_Pais" Multiplicity="0..1" />
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Pais">
+              <PropertyRef Name="idPais" />
+            </Principal>
+            <Dependent Role="GRH_Persona">
+              <PropertyRef Name="idPais_R" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Postu__idPer__5066D2A5">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Postulante" Type="GRH_Model.GRH_Postulante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Postulante">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRH_Telef__idPer__515AF6DE">
+          <End Role="GRH_Persona" Type="GRH_Model.GRH_Persona" Multiplicity="0..1" />
+          <End Role="GRH_Telefono" Type="GRH_Model.GRH_Telefono" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRH_Persona">
+              <PropertyRef Name="idPersona" />
+            </Principal>
+            <Dependent Role="GRH_Telefono">
+              <PropertyRef Name="idPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GRH_ModelStoreContainer" CdmEntityContainer="GRH_Entities">
+          <EntitySetMapping Name="GRH_Area">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Area">
+              <MappingFragment StoreEntitySet="GRH_Area">
+                <ScalarProperty Name="idArea" ColumnName="idArea" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Cargo">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Cargo">
+              <MappingFragment StoreEntitySet="GRH_Cargo">
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_ContratoPersonal">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_ContratoPersonal">
+              <MappingFragment StoreEntitySet="GRH_ContratoPersonal">
+                <ScalarProperty Name="idContratoPersonal" ColumnName="idContratoPersonal" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="nroContrato" ColumnName="nroContrato" />
+                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+                <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Correo">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Correo">
+              <MappingFragment StoreEntitySet="GRH_Correo">
+                <ScalarProperty Name="idCorreo" ColumnName="idCorreo" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="cuentaCorreo" ColumnName="cuentaCorreo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_DerechoHabiente">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_DerechoHabiente">
+              <MappingFragment StoreEntitySet="GRH_DerechoHabiente">
+                <ScalarProperty Name="idDerechoHabiente" ColumnName="idDerechoHabiente" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idTipoDerechoHabiente" ColumnName="idTipoDerechoHabiente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Documento">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Documento">
+              <MappingFragment StoreEntitySet="GRH_Documento">
+                <ScalarProperty Name="idDocumento" ColumnName="idDocumento" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+                <ScalarProperty Name="nroDocumento" ColumnName="nroDocumento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Empleado">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Empleado">
+              <MappingFragment StoreEntitySet="GRH_Empleado">
+                <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+                <ScalarProperty Name="idArea" ColumnName="idArea" />
+                <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+                <ScalarProperty Name="fechaCese" ColumnName="fechaCese" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Especialidad">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Especialidad">
+              <MappingFragment StoreEntitySet="GRH_Especialidad">
+                <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_EstadoCivil">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_EstadoCivil">
+              <MappingFragment StoreEntitySet="GRH_EstadoCivil">
+                <ScalarProperty Name="idEstadoCivil" ColumnName="idEstadoCivil" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_EstudioRealizado">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_EstudioRealizado">
+              <MappingFragment StoreEntitySet="GRH_EstudioRealizado">
+                <ScalarProperty Name="idEstudioRealizado" ColumnName="idEstudioRealizado" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idEspecialidad" ColumnName="idEspecialidad" />
+                <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+                <ScalarProperty Name="idSituacionEstudio" ColumnName="idSituacionEstudio" />
+                <ScalarProperty Name="centroEstudio" ColumnName="centroEstudio" />
+                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+                <ScalarProperty Name="fechaFin" ColumnName="fechaFin" />
+                <ScalarProperty Name="nombreEstudio" ColumnName="nombreEstudio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_ExperienciaLaboral">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_ExperienciaLaboral">
+              <MappingFragment StoreEntitySet="GRH_ExperienciaLaboral">
+                <ScalarProperty Name="idExperienciaLaboral" ColumnName="idExperienciaLaboral" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="conocimientos" ColumnName="conocimientos" />
+                <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="empresa" ColumnName="empresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Idioma">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Idioma">
+              <MappingFragment StoreEntitySet="GRH_Idioma">
+                <ScalarProperty Name="idIdioma" ColumnName="idIdioma" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_IdiomaPersona">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_IdiomaPersona">
+              <MappingFragment StoreEntitySet="GRH_IdiomaPersona">
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idIdioma" ColumnName="idIdioma" />
+                <ScalarProperty Name="idNivelIdioma" ColumnName="idNivelIdioma" />
+                <ScalarProperty Name="nativo" ColumnName="nativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_NivelEducativo">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_NivelEducativo">
+              <MappingFragment StoreEntitySet="GRH_NivelEducativo">
+                <ScalarProperty Name="idNivelEducativo" ColumnName="idNivelEducativo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_NivelIdioma">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_NivelIdioma">
+              <MappingFragment StoreEntitySet="GRH_NivelIdioma">
+                <ScalarProperty Name="idNivelIdioma" ColumnName="idNivelIdioma" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Pais">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Pais">
+              <MappingFragment StoreEntitySet="GRH_Pais">
+                <ScalarProperty Name="idPais" ColumnName="idPais" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Persona">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Persona">
+              <MappingFragment StoreEntitySet="GRH_Persona">
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="idPais_R" ColumnName="idPais_R" />
+                <ScalarProperty Name="idPais_N" ColumnName="idPais_N" />
+                <ScalarProperty Name="idEstadoCivil" ColumnName="idEstadoCivil" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Postulante">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Postulante">
+              <MappingFragment StoreEntitySet="GRH_Postulante">
+                <ScalarProperty Name="idPostulante" ColumnName="idPostulante" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_SituacionEstudio">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_SituacionEstudio">
+              <MappingFragment StoreEntitySet="GRH_SituacionEstudio">
+                <ScalarProperty Name="idSituacionEstudio" ColumnName="idSituacionEstudio" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_Telefono">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_Telefono">
+              <MappingFragment StoreEntitySet="GRH_Telefono">
+                <ScalarProperty Name="idTelefono" ColumnName="idTelefono" />
+                <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+                <ScalarProperty Name="nroTelefono" ColumnName="nroTelefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_TipoDerechoHabiente">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_TipoDerechoHabiente">
+              <MappingFragment StoreEntitySet="GRH_TipoDerechoHabiente">
+                <ScalarProperty Name="idTipoDerechoHabiente" ColumnName="idTipoDerechoHabiente" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRH_TipoDocumento">
+            <EntityTypeMapping TypeName="GRH_Model.GRH_TipoDocumento">
+              <MappingFragment StoreEntitySet="GRH_TipoDocumento">
+                <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="GRH_DB">
+        <EntityTypeShape EntityType="GRH_Model.GRH_Area" Width="1.5" PointX="6" PointY="24" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Cargo" Width="1.5" PointX="6" PointY="2.25" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_ContratoPersonal" Width="1.5" PointX="10.5" PointY="14.875" Height="2.1725878906249978" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Correo" Width="1.5" PointX="5.25" PointY="10.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_DerechoHabiente" Width="1.5" PointX="5.25" PointY="14.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Documento" Width="1.5" PointX="5.25" PointY="17.875" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Empleado" Width="1.5" PointX="8.25" PointY="14.375" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Especialidad" Width="1.5" PointX="6" PointY="7.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_EstadoCivil" Width="1.5" PointX="0.75" PointY="12.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_EstudioRealizado" Width="1.5" PointX="8.25" PointY="9.125" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_ExperienciaLaboral" Width="1.5" PointX="5.25" PointY="27.625" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Idioma" Width="1.5" PointX="6" PointY="31" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_IdiomaPersona" Width="1.5" PointX="8.25" PointY="18.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_NivelEducativo" Width="1.5" PointX="6" PointY="5.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_NivelIdioma" Width="1.5" PointX="6" PointY="39.25" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Pais" Width="1.5" PointX="0.75" PointY="15" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Persona" Width="1.5" PointX="3" PointY="13.25" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Postulante" Width="1.5" PointX="5.25" PointY="34" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_SituacionEstudio" Width="1.5" PointX="6" PointY="21.5" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_Telefono" Width="1.5" PointX="5.25" PointY="36.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_TipoDerechoHabiente" Width="1.5" PointX="3" PointY="10.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="GRH_Model.GRH_TipoDocumento" Width="1.5" PointX="3" PointY="20.125" Height="1.595683593749996" IsExpanded="true" />
+        <AssociationConnector Association="GRH_Model.FK__GRH_Emple__idAre__430CD787" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="24.001152846153843" />
+          <ConnectorPoint PointX="7.875" PointY="23.626152846153843" />
+          <ConnectorPoint PointX="7.875" PointY="15.942047526041666" />
+          <ConnectorPoint PointX="7.947916666666667" PointY="15.942047526041666" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="15.942047526041666" />
+          <ConnectorPoint PointX="8.25" PointY="15.942047526041666" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Emple__idCar__4400FBC0" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="3.7833749014423068" />
+          <ConnectorPoint PointX="7.9375" PointY="4.2208749014423068" />
+          <ConnectorPoint PointX="7.9375" PointY="15.127271763020833" />
+          <ConnectorPoint PointX="7.947916666666667" PointY="15.127271763020833" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="15.127271763020833" />
+          <ConnectorPoint PointX="8.25" PointY="15.127271763020833" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Contr__idEmp__3C5FD9F8" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="15.961293945312498" />
+          <ConnectorPoint PointX="10.5" PointY="15.961293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Corre__idPer__3D53FE31" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.258075923076925" />
+          <ConnectorPoint PointX="4.90625" PointY="12.851825923076923" />
+          <ConnectorPoint PointX="4.90625" PointY="13.007887872195514" />
+          <ConnectorPoint PointX="5.2511528461538459" PointY="12.662985026041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Derec__idEmp__3F3C46A3" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="16.590968424479165" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="16.590968424479165" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="16.590968424479165" />
+          <ConnectorPoint PointX="6.75" PointY="16.590968424479165" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Derec__idPer__40306ADC" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.932444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="15.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Derec__idTip__3E48226A" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.283374901442311" />
+          <ConnectorPoint PointX="5.0625" PointY="12.845874901442311" />
+          <ConnectorPoint PointX="5.0625" PointY="15.309970330729165" />
+          <ConnectorPoint PointX="5.25" PointY="15.309970330729165" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Docum__idPer__4218B34E" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.187205403645834" />
+          <ConnectorPoint PointX="5.25" PointY="18.187205403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Docum__idTip__41248F15" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="20.78125" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="20.78125" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="20.78125" />
+          <ConnectorPoint PointX="5.010416666666667" PointY="20.78125" />
+          <ConnectorPoint PointX="5.239583333333333" PointY="20.78125" />
+          <ConnectorPoint PointX="5.59375" PointY="20.78125" />
+          <ConnectorPoint PointX="5.59375" PointY="20.047587890624996" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Emple__idPer__44F51FF9" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.3432421875" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="17.3432421875" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="17.3432421875" />
+          <ConnectorPoint PointX="8.25" PointY="17.3432421875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Estud__idEsp__47D18CA4" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="8.5104141666666653" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="8.6770808333333331" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="9" PointY="8.4374995000000013" />
+          <ConnectorPoint PointX="9" PointY="9.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Perso__idEst__4D8A65FA" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.485341796875" />
+          <ConnectorPoint PointX="3" PointY="13.485341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Estud__idNiv__46DD686B" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="5.9228417968750016" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="5.9228417968750007" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="5.9228417968750016" />
+          <ConnectorPoint PointX="8.5937475" PointY="5.9228417968750016" />
+          <ConnectorPoint PointX="8.5937475" PointY="9.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Estud__idPer__48C5B0DD" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.276537461538462" />
+          <ConnectorPoint PointX="4.75" PointY="12.875" />
+          <ConnectorPoint PointX="4.75" PointY="13.018697916666667" />
+          <ConnectorPoint PointX="4.979166666666667" PointY="13.018697916666667" />
+          <ConnectorPoint PointX="5.145833333333333" PointY="13.018697916666667" />
+          <ConnectorPoint PointX="7.875" PointY="13.018697916666667" />
+          <ConnectorPoint PointX="7.87857443490112" PointY="13.015123481765546" />
+          <ConnectorPoint PointX="8.0901755650988783" PointY="12.803522351567789" />
+          <ConnectorPoint PointX="8.25" PointY="12.643697916666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Estud__idSit__45E94432" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="21.532306692307689" />
+          <ConnectorPoint PointX="7.8160744349011209" PointY="21.216232257406567" />
+          <ConnectorPoint PointX="7.9339255650988791" PointY="21.09838112720881" />
+          <ConnectorPoint PointX="8.03125" PointY="21.001056692307689" />
+          <ConnectorPoint PointX="8.03125" PointY="10.853096958333332" />
+          <ConnectorPoint PointX="8.25" PointY="10.853096958333332" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Exper__idPer__49B9D516" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.462486730368589" />
+          <ConnectorPoint PointX="5.15625" PointY="19.118736730368589" />
+          <ConnectorPoint PointX="5.15625" PointY="28.903595377604166" />
+          <ConnectorPoint PointX="5.25" PointY="28.903595377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Idiom__idIdi__4BA21D88" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="31.797841796875" />
+          <ConnectorPoint PointX="8.5104141666666653" PointY="31.797841796875" />
+          <ConnectorPoint PointX="8.6770808333333331" PointY="31.797841796875" />
+          <ConnectorPoint PointX="9" PointY="31.797841796875" />
+          <ConnectorPoint PointX="9" PointY="21.114889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Idiom__idNiv__4AADF94F" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="40.047841796875005" />
+          <ConnectorPoint PointX="8.5937475" PointY="40.047841796875005" />
+          <ConnectorPoint PointX="8.5937475" PointY="21.114889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Idiom__idPer__4C9641C1" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.718748" PointY="18.499410807291667" />
+          <ConnectorPoint PointX="3.718748" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="5" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="5" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="5.010416666666667" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="5.239583333333333" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="5.510416666666667" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="5.677083333333333" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="7.625" PointY="20.297587890624996" />
+          <ConnectorPoint PointX="7.625" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="19.932444661458334" />
+          <ConnectorPoint PointX="8.25" PointY="19.932444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Perso__idPai__4E7E8A33" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.893992513020834" />
+          <ConnectorPoint PointX="3" PointY="15.893992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Perso__idPai__4F72AE6C" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="15.384496256510417" />
+          <ConnectorPoint PointX="3" PointY="15.384496256510417" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Postu__idPer__5066D2A5" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.468255961137821" />
+          <ConnectorPoint PointX="5.09375" PointY="19.062005961137821" />
+          <ConnectorPoint PointX="5.09375" PointY="34.893992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="34.893992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="GRH_Model.FK__GRH_Telef__idPer__515AF6DE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.4630769230769225" PointY="18.499410807291667" />
+          <ConnectorPoint PointX="4.875" PointY="18.911333884214745" />
+          <ConnectorPoint PointX="4.875" PointY="37.393992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="37.393992513020834" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

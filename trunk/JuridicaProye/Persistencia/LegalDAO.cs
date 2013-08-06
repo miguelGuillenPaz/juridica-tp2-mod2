@@ -107,64 +107,108 @@ namespace DemoMVC.Persistencia
             return totIns;
         }
 
-        public List<Proyecto> listarProyecto(string statusProye)
-        {
-            List<Proyecto> listaProyecto = null;
-            Proyecto proye = null;
+        //public List<Proyecto> listarProyecto(string statusProye)
+        //{
+        //    List<Proyecto> listaProyecto = null;
+        //    Proyecto proye = null;
 
-            string sql = "";
-            sql = "select  codPro, nomPro from t_proyecto where estPro =@statusProye";
+        //    string sql = "";
+        //    sql = "select  codPro, nomPro from t_proyecto where estPro =@statusProye";
 
-            using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
-            {
-                con.Open();
-                using (SqlCommand com = new SqlCommand(sql, con))
-                {
-                    com.Parameters.Add(new SqlParameter("@statusProye", statusProye));
+        //    using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
+        //    {
+        //        con.Open();
+        //        using (SqlCommand com = new SqlCommand(sql, con))
+        //        {
+        //            com.Parameters.Add(new SqlParameter("@statusProye", statusProye));
 
-                    using (SqlDataReader resultado = com.ExecuteReader())
-                    {
-                        if (resultado.HasRows)
-                        {
-                            listaProyecto = new List<Proyecto>();
-                            while (resultado.Read())
-                            {
-                                proye = new Proyecto()
-                                {
-                                    codPro = (int)resultado["codPro"],
-                                    desPro = (String)resultado["nomPro"],
-                                };
-                                listaProyecto.Add(proye);
-                            }
-                        }
-                        else
-                        {
-                            Debug.WriteLine("No retornó registros");
-                        }
+        //            using (SqlDataReader resultado = com.ExecuteReader())
+        //            {
+        //                if (resultado.HasRows)
+        //                {
+        //                    listaProyecto = new List<Proyecto>();
+        //                    while (resultado.Read())
+        //                    {
+        //                        proye = new Proyecto()
+        //                        {
+        //                            codPro = (int)resultado["codPro"],
+        //                            desPro = (String)resultado["nomPro"],
+        //                        };
+        //                        listaProyecto.Add(proye);
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    Debug.WriteLine("No retornó registros");
+        //                }
 
-                    }
-                }
+        //            }
+        //        }
 
 
-            }
-            return listaProyecto;
+        //    }
+        //    return listaProyecto;
 
-        }
+        //}
 
-        public List<Requerimiento> listarRequerimiento(string idRequerimiento)
+        public List<Requerimiento> listarRequerimiento(Int16 idRequerimiento, Int16 idProyecto, Int16 idTipo, Int16 idEstado, DateTime fecIni, DateTime fecFin)
         {
             List<Requerimiento> listaRequerimiento = null;
             Requerimiento req = null;
 
-            string sql = "";
-            sql = "select idReqLegal,idTipoReqLegal,codPro,dfechaRegistro from T_RequerimientoLegal_CN";
+           string sql = "";
+            sql = "select idReqLegal, r.codPro,p.desPro,p.nomPro,r.idTipoReqLegal,rt.cDescripcion,r.cDescripcion as 'desc',dFechaRegistro,r.idEstadoReqLegal, re.cDescripcion as 'estado' ";
+            sql = sql + "from T_RequerimientoLegal_CN r ";
+            sql = sql + "inner join T_Proyecto p on p.codPro = r.codPro ";
+            sql = sql + "inner join T_RequerimientoLegal_Tipo rt on rt.idTipoReqLegal = r.idTipoReqLegal ";
+            sql = sql + "inner join t_requerimientoLegal_estado re on re.idEstadoReqLegal= r.idEstadoReqLegal ";
+            sql = sql + "where (@idEstado is null or r.idEstadoReqLegal=@idEstado) ";
+            sql = sql + "and (@idTipo is null or r.idTipoReqLegal =@idTipo) ";
+            sql = sql + "and (@idProyecto is null or r.codPro = @idProyecto) ";
+            sql = sql + "and (@idReqLegal is null or r.idReqLegal =@idReqLegal) ";
+            sql = sql + "and r.dFechaRegistro >= @fecIni ";
+            sql = sql + "and r.dFechaRegistro <= @fecFin";
+            
 
             using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
             {
                 con.Open();
                 using (SqlCommand com = new SqlCommand(sql, con))
                 {
-                    com.Parameters.Add(new SqlParameter("@idReq", idRequerimiento));
+                    if (idRequerimiento == 0)
+                    {
+                        com.Parameters.Add(new SqlParameter("@idReqLegal", DBNull.Value));
+                    }
+                    else
+                    {
+                        com.Parameters.Add(new SqlParameter("@idReqLegal", idRequerimiento));
+                    }
+                    if (idProyecto == 0)
+                    {
+                        com.Parameters.Add(new SqlParameter("@idProyecto", DBNull.Value));
+                    }
+                    else
+                    {
+                        com.Parameters.Add(new SqlParameter("@idProyecto", idProyecto));
+                    }
+                    if (idEstado == 0)
+                    {
+                        com.Parameters.Add(new SqlParameter("@idEstado", DBNull.Value));
+                    }
+                    else
+                    {
+                        com.Parameters.Add(new SqlParameter("@idEstado", idEstado));
+                    }
+                    if (idTipo == 0)
+                    {
+                        com.Parameters.Add(new SqlParameter("@idTipo", DBNull.Value));
+                    }
+                    else
+                    {
+                        com.Parameters.Add(new SqlParameter("@idTipo", idTipo));
+                    }
+                    com.Parameters.Add(new SqlParameter("@fecIni", fecIni));
+                    com.Parameters.Add(new SqlParameter("@fecFin", fecFin));
 
                     using (SqlDataReader resultado = com.ExecuteReader())
                     {
@@ -173,11 +217,16 @@ namespace DemoMVC.Persistencia
                             listaRequerimiento = new List<Requerimiento>();
                             while (resultado.Read())
                             {
+                                
                                 req = new Requerimiento()
                                 {
                                     idReq = (int)resultado["idReqLegal"],
+                                    descripcion = (String)resultado["desc"],
+                                    desEstado =(String)resultado["estado"],
                                     idTipoRequerimiento = (Int16)resultado["idTipoReqLegal"],
+                                    desProyecto =(String)resultado["desPro"],
                                     idProyecto = (int)resultado["codPro"],
+                                    idEstado = (Int16)resultado["idEstadoReqLegal"],
                                     fecha = (DateTime)resultado["dFechaRegistro"],
                                  };
                                 listaRequerimiento.Add(req);
@@ -201,7 +250,7 @@ namespace DemoMVC.Persistencia
             TipoRequerimiento tipo = null;
 
             string sql = "";
-            sql = "select idTipoReqLegal, cDescripcion from T_RequerimientoLegal_Tipo";
+            sql = "select idTipoReqLegal, cDescripcion from T_RequerimientoLegal_Tipo where bActivo=1";
 
             using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
             {
@@ -237,5 +286,43 @@ namespace DemoMVC.Persistencia
             return listaTipoRequerimiento;
         }
 
+        public List<Estado> listarEstadoRequerimiento()
+        {
+            List<Estado> listaEstadoRequerimiento = null;
+            Estado estado = null;
+
+            string sql = "";
+            sql = "select idEstadoReqLegal, cDescripcion from T_RequerimientoLegal_Estado";
+
+            using (SqlConnection con = new SqlConnection(ConexionUtil.Cadena))
+            {
+                con.Open();
+                using (SqlCommand com= new SqlCommand(sql, con))
+                {
+                    using (SqlDataReader resultado = com.ExecuteReader())
+                    {
+                        if (resultado.HasRows)
+                        {
+                            listaEstadoRequerimiento = new List<Estado>();
+                            while (resultado.Read())
+                            {
+                                estado = new Estado()
+                            {
+                                idEstadoReq = (Int16)resultado["idEstadoReqLegal"],
+                                descripcion = (String)resultado["cDescripcion"],
+                            };
+                                listaEstadoRequerimiento.Add(estado);
+                            }
+                        }
+                        else
+                        {
+                            Debug.WriteLine("No retornó registros");
+                        }
+                    }
+                }
+            }
+            return listaEstadoRequerimiento;
+        }
+        
     }
 }

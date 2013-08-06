@@ -17,7 +17,10 @@ namespace DemoMVC.Models
         public int idProyecto { get; set; }
         public string desProyecto { get; set; }
         public DateTime fecha { get; set; }
-        public string idEstado { get; set; }
+        public Int16 idEstado { get; set; }
         public string desEstado { get; set; }
+        public IList<Estado> listadoEstado { get; set; }
+        public IList<TipoRequerimiento> listadoTipoRequerimiento { get; set; }
+        public IList<Proyecto> listadoProyectos { get; set; }
     }
 }

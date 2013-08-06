@@ -98,6 +98,7 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\DetallePresupuesto.cs" />
     <Compile Include="Models\Entregable.cs" />
+    <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\EstimadoRapidoForm.cs" />
     <Compile Include="Models\GRH_DB.Designer.cs">
       <AutoGen>True</AutoGen>

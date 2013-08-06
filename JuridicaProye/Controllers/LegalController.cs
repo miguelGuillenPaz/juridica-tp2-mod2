@@ -21,9 +21,9 @@ namespace DemoMVC.Controllers
 
         public ActionResult Registrar()
         {
-            LegalDAO proye = new LegalDAO();
-            ViewData["Proyectos"] = new SelectList(proye.listarProyecto("PRE").ToList(), "codPro", "desPro");
 
+            ProyectoDAO proye = new ProyectoDAO();
+            ViewData["Proyectos"] = new SelectList(proye.obtenerProyectoPorFiltro(1,0,"PRE").ToList(), "codPro", "nomPro");
             return View();
         }
 
@@ -64,7 +64,8 @@ namespace DemoMVC.Controllers
             //}
 
             //int totInsVec = 0;
-            ViewData["Proyectos"] = new SelectList(legalDAO.listarProyecto("PRE").ToList(), "codPro", "desPro");
+            ProyectoDAO proyecto = new ProyectoDAO();
+            ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1,0,"PRE").ToList(), "codPro", "nomPro");
 
             if (nuevoIdReqLegal > 0) TempData["bInsertSuccess"] = true; else TempData["bInsertSuccess"] = false;
 
@@ -76,17 +77,17 @@ namespace DemoMVC.Controllers
          public ActionResult listarRequerimientos()
         {
             LegalDAO proye = new LegalDAO();
+            ProyectoDAO proyecto = new ProyectoDAO();
 
+            ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1, 0, "PRE"), "codPro", "nomPro");
 
-            ViewData["Proyectos"] = new SelectList(proye.listarProyecto("PRE").ToList(), "codPro", "desPro");
             ViewData["TipoReq"] = new SelectList(proye.listarTipoRequerimiento().ToList(), "idTipoReq", "descripcion");
             //return View(proye);
 
             List<Requerimiento> listadoRequerimiento = null;
-            
-            listadoRequerimiento= proye.listarRequerimiento("");
 
-            
+            listadoRequerimiento = proye.listarRequerimiento(0, 0, 0, 0, Convert.ToDateTime("2013-01-01"), Convert.ToDateTime("2013-08-31"));
+                         
             return View(listadoRequerimiento);
         }
 
@@ -94,17 +95,18 @@ namespace DemoMVC.Controllers
         public ActionResult listarRequerimientos(FormCollection formCollection)
         {
             LegalDAO proye = new LegalDAO();
+            ProyectoDAO proyecto = new ProyectoDAO();
 
             List<Requerimiento> listadoRequerimiento = null;
 
-            ViewData["Proyectos"] = new SelectList(proye.listarProyecto("PRE").ToList(), "codPro", "desPro");
+            ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1,0,"PRE").ToList(), "codPro", "nomPro");
             ViewData["TipoReq"] = new SelectList(proye.listarTipoRequerimiento().ToList(), "idTipoReq", "descripcion");
             
 
-            String txtCodSolicitud = formCollection["txtCodSolicitud"].ToString();
+            String  txtCodSolicitud = formCollection["txtCodSolicitud"].ToString();
             String txtCodPro = formCollection["codPro"].ToString();
-            String txtTipoReq = formCollection["codTipoReq"].ToString();
-            listadoRequerimiento = proye.listarRequerimiento(txtCodSolicitud);
+            String  txtTipoReq = formCollection["codTipoReq"].ToString();
+            listadoRequerimiento = proye.listarRequerimiento(Convert.ToInt16(DBNull.Value),1,1,1,Convert.ToDateTime("2013-01-01"),Convert.ToDateTime("2013-09-01"));
 
 
             return View(listadoRequerimiento);

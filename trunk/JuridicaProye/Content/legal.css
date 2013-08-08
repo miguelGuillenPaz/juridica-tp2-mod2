@@ -50,3 +50,26 @@ Registrar Requerimiento*/
 
 #btnGrabarReqLegal {margin-top:20px;}
 .msgConfirmacion {margin:15px 0; padding:10px 0; border:1px solid #ccc; width:100%; background:#f6f6f6; font-size:14px; color:Red; text-align:center;}
+
+/*table
+*/
+table 
+{
+  border: solid 1px #e8eef4;
+  border-collapse: collapse;
+}
+
+table td 
+{
+  padding: 5px;   
+  border: solid 1px #e8eef4;
+}
+
+table th
+{
+  padding: 6px 5px;
+  text-align: left;
+  background-color: #e8eef4; 
+  border: solid 1px #e8eef4;   
+}
+

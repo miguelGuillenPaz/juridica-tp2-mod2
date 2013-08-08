@@ -13,14 +13,15 @@ namespace DemoMVC.Models
 
         public int idReq { get; set; }
         public Int16 idTipoRequerimiento { get; set; }
+        public string descTipoReq { get; set; }
         public string descripcion { get; set; }
         public int idProyecto { get; set; }
         public string desProyecto { get; set; }
         public DateTime fecha { get; set; }
         public Int16 idEstado { get; set; }
         public string desEstado { get; set; }
-        public IList<Estado> listadoEstado { get; set; }
-        public IList<TipoRequerimiento> listadoTipoRequerimiento { get; set; }
-        public IList<Proyecto> listadoProyectos { get; set; }
+        public  Estado estado { get; set; }
+        public TipoRequerimiento tipoRequerimiento{ get; set; }
+        public Proyecto Proyecto { get; set; }
     }
 }

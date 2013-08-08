@@ -82,6 +82,8 @@ namespace DemoMVC.Controllers
             ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1, 0, "PRE"), "codPro", "nomPro");
 
             ViewData["TipoReq"] = new SelectList(proye.listarTipoRequerimiento().ToList(), "idTipoReq", "descripcion");
+
+            ViewData["Estado"] = new SelectList(proye.listarEstadoRequerimiento().ToList(), "idEstadoReq", "descripcion");
             //return View(proye);
 
             List<Requerimiento> listadoRequerimiento = null;
@@ -94,22 +96,75 @@ namespace DemoMVC.Controllers
         [HttpPost]
         public ActionResult listarRequerimientos(FormCollection formCollection)
         {
+            
+            
             LegalDAO proye = new LegalDAO();
             ProyectoDAO proyecto = new ProyectoDAO();
 
             List<Requerimiento> listadoRequerimiento = null;
-
-            ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1,0,"PRE").ToList(), "codPro", "nomPro");
+          
+            try
+            {
+           ViewData["Proyectos"] = new SelectList(proyecto.obtenerProyectoPorFiltro(1,0,"PRE").ToList(), "codPro", "nomPro");
             ViewData["TipoReq"] = new SelectList(proye.listarTipoRequerimiento().ToList(), "idTipoReq", "descripcion");
-            
+            ViewData["Estado"] = new SelectList(proye.listarEstadoRequerimiento().ToList(), "idEstadoReq", "descripcion");
 
+            String txtFecIni = formCollection["txtFecIni"];
+            String txtFecFin = formCollection["txtFecFin"];
             String  txtCodSolicitud = formCollection["txtCodSolicitud"].ToString();
             String txtCodPro = formCollection["codPro"].ToString();
             String  txtTipoReq = formCollection["codTipoReq"].ToString();
-            listadoRequerimiento = proye.listarRequerimiento(Convert.ToInt16(DBNull.Value),1,1,1,Convert.ToDateTime("2013-01-01"),Convert.ToDateTime("2013-09-01"));
+            string txtEstado = formCollection["codEstado"].ToString();
+
+            if (txtCodSolicitud == "") {
+                txtCodSolicitud = "0";
+            }
+            listadoRequerimiento = proye.listarRequerimiento(Convert.ToInt16(txtCodSolicitud),Convert.ToInt16(txtCodPro),Convert.ToInt16(txtTipoReq),Convert.ToInt16(txtEstado),Convert.ToDateTime(txtFecIni),Convert.ToDateTime(txtFecFin));
+
+            if (listadoRequerimiento == null)
+            {
+                Response.Write("<script>window.alert('No existen valores')</script>");
+            }
+            }
+            catch(Exception e)
+            {
+                Response.Write("<script>window.alert('Datos incorrectos')</script>");
+            }
 
 
             return View(listadoRequerimiento);
+        }
+
+        [HttpGet]
+        public ActionResult DetalleRequerimiento(Int16 idRequerimiento)
+        {
+            LegalDAO legal = new LegalDAO();
+
+            List<Requerimiento> listadoRequerimiento = null;
+
+            listadoRequerimiento = legal.listarRequerimiento(idRequerimiento, 0, 0, 0, Convert.ToDateTime("2013-01-01"), Convert.ToDateTime("2013-09-01"));
+
+            int idReq=0;
+            String nomProy="";
+            String tipoRequerimiento="";
+            String estado ="";
+            String Descripcion ="";
+
+            foreach (Requerimiento req in listadoRequerimiento){
+                idReq =req.idReq;
+                nomProy = req.desProyecto;
+                tipoRequerimiento = req.descTipoReq;
+                estado = req.desEstado;
+                Descripcion = req.descripcion;
+            }
+
+            ViewData["idReq"] = idReq;
+            ViewData["Proyecto"] = nomProy;
+            ViewData["tipoReq"] = tipoRequerimiento;
+            ViewData["estado"] = estado;
+            ViewData["descripcion"] = Descripcion;
+
+            return View();
         }
     }
 

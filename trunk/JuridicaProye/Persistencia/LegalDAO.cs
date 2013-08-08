@@ -222,13 +222,20 @@ namespace DemoMVC.Persistencia
                                 {
                                     idReq = (int)resultado["idReqLegal"],
                                     descripcion = (String)resultado["desc"],
+                                    descTipoReq=(String)resultado["cDescripcion"],
                                     desEstado =(String)resultado["estado"],
                                     idTipoRequerimiento = (Int16)resultado["idTipoReqLegal"],
                                     desProyecto =(String)resultado["desPro"],
                                     idProyecto = (int)resultado["codPro"],
                                     idEstado = (Int16)resultado["idEstadoReqLegal"],
                                     fecha = (DateTime)resultado["dFechaRegistro"],
+                                    
                                  };
+                                Proyecto pro = new Proyecto();
+                                pro.codPro = (int)resultado["codPro"];
+                                pro.desPro = (String)resultado["desPro"];
+
+                                req.Proyecto = pro;
                                 listaRequerimiento.Add(req);
                             }
                         }
@@ -263,6 +270,12 @@ namespace DemoMVC.Persistencia
                         if (resultado.HasRows)
                         {
                             listaTipoRequerimiento = new List<TipoRequerimiento>();
+                            tipo = new TipoRequerimiento()
+                            {
+                                idTipoReq=0,
+                                descripcion="Todos",
+                            };
+                            listaTipoRequerimiento.Add(tipo);
                             while (resultado.Read())
                             {
                                 tipo = new TipoRequerimiento()
@@ -304,6 +317,12 @@ namespace DemoMVC.Persistencia
                         if (resultado.HasRows)
                         {
                             listaEstadoRequerimiento = new List<Estado>();
+                            estado= new Estado()
+                            {
+                                idEstadoReq = 0,
+                                descripcion = "Todos",
+                            };
+                            listaEstadoRequerimiento.Add(estado);
                             while (resultado.Read())
                             {
                                 estado = new Estado()

@@ -205,6 +205,7 @@
     <Content Include="Views\Home\Index2.aspx" />
     <Content Include="Views\Home\Listar.aspx" />
     <Content Include="Views\Home\Prueba.aspx" />
+    <Content Include="Views\Legal\DetalleRequerimiento.aspx" />
     <Content Include="Views\Legal\ListarRequerimientos.aspx" />
     <Content Include="Views\Legal\Registrar.aspx" />
     <Content Include="Views\Legal\Requerimientos.aspx" />
@@ -292,7 +293,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51572</DevelopmentServerPort>
+          <DevelopmentServerPort>5495</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
